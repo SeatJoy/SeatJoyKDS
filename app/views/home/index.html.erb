@@ -9,8 +9,6 @@
   <ul class="vertical medium-horizontal menu expanded text-center">
     <li><a href="#"><div class="stat">28</div><span>Orders</span></a></li>
     <li><a href="#"><div class="stat">43</div><span>Done</span></a></li>
-    <li><a href="#"><div class="stat">59</div><span>Customers</span></a></li>
-    <li><a href="#"><div class="stat">95</div><span>Runners</span></a></li>
   </ul>
 </div>
 
@@ -28,7 +26,6 @@
         </div>
 
         <div class="large-12 columns">
-          <p class="lead">Robert L</p>
           <p>Ph# (503)-444-1111</p>
         </div>
 
@@ -51,10 +48,10 @@
         <% [2,3,4].sample.times do |i| %>
           <div class="large-12 columns">
             <div class="large-8 medium-8 small-8 columns">
-              <%= ["2 Hotdog", "M Coke", "S Curly Fries", "Hamburger"].sample %>
+              <%= ["Hotdog", "M Coke", "S Curly Fries", "Hamburger"].sample %>
             </div>
             <div class="large-4 medium-4 small-4 columns">
-              <%= ["Waiting", "Completed"].sample %>
+              <%= [1, 2, 3].sample %>
             </div>
           </div>
         <% end %>
