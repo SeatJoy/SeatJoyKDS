@@ -1,4 +1,8 @@
-<div class="column">
+<div id="order_<%= order.id %>" class="column">
+  <div id="loader_<%= order.id %>">
+    <%#= image_tag "loader.gif" %>
+  </div>
+
   <div class="large-12 columns callout">
     <div class="large-6 medium-6 small-6 columns">
       <p>Order #<%= order.id %></p>
@@ -40,7 +44,7 @@
 
     <div class="large-12 columns">
       <br/>
-      <a href="#" class="button expanded">Mark as Done</a>
+      <a href="#" class="button expanded" data-behavior="mark-as-done" data-order-id="<%= order.id %>">Mark as Done</a>
     </div>
   </div>
 </div>
