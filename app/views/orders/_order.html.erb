@@ -1,8 +1,4 @@
 <div id="order_<%= order.id %>" class="column">
-  <div id="loader_<%= order.id %>">
-    <%#= image_tag "loader.gif" %>
-  </div>
-
   <div class="large-12 columns callout">
     <div class="large-6 medium-6 small-6 columns">
       <p>Order #<%= order.id %></p>
@@ -43,7 +39,6 @@
     <% end %>
 
     <div class="large-12 columns">
-      <br/>
       <%= link_to "Mark as Done", mark_as_done_order_path(order), remote: true, method: :put, class: "button expanded" %>
     </div>
   </div>

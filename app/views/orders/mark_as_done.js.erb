@@ -5,3 +5,6 @@ $("#orders_done").text("<%= done %>");
 // orders list re-rendered
 $("#orders").html("");
 $("#orders").html("<%= escape_javascript(render collection) %>")
+
+// hide loader gif
+$("#loader").hide();

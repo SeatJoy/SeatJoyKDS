@@ -8,6 +8,7 @@
 <div class="row column">
   <ul class="vertical medium-horizontal menu expanded text-center">
     <li><a href="#"><div id="orders_pending" class="stat"><%= @pending %></div><span>Pending</span></a></li>
+    <li><a href="#"><div id="loader" class="stat" style="display:none;"><%= image_tag "loader.gif" %></div><span></span></a></li>
     <li><a href="#"><div id="orders_done" class="stat"><%= @done %></div><span>Done</span></a></li>
   </ul>
 </div>
