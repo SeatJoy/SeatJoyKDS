@@ -1,5 +1,7 @@
-$("#order_<%= @order.id %>").hide();
-
 // counters updated
 $("#orders_pending").text("<%= pending %>");
 $("#orders_done").text("<%= done %>");
+
+// orders list re-rendered
+$("#orders").html("");
+$("#orders").html("<%= escape_javascript(render collection) %>")
