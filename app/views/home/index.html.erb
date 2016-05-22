@@ -7,39 +7,39 @@
 
 <div class="row column">
   <ul class="vertical medium-horizontal menu expanded text-center">
-    <li><a href="#"><div class="stat">28</div><span>Orders</span></a></li>
-    <li><a href="#"><div class="stat">43</div><span>Done</span></a></li>
+    <li><a href="#"><div class="stat"><%= @pending %></div><span>Orders</span></a></li>
+    <li><a href="#"><div class="stat"><%= @done %></div><span>Done</span></a></li>
   </ul>
 </div>
 
 <hr>
 
 <div class="row small-up-1 medium-up-2 large-up-3">
-  <% 10.times do |i| %>
+  <% orders.each do |order| %>
     <div class="column">
       <div class="large-12 columns callout">
         <div class="large-6 medium-6 small-6 columns">
-          <p>Order #123123</p>
+          <p>Order #<%= order.id %></p>
         </div>
         <div class="large-6 medium-6 small-6 columns" style="text-align:right;">
-          <b>11:17:30</b>
+          <b><%= order.created_at.strftime("%I:%M:%S") %></b>
         </div>
 
         <div class="large-12 columns">
-          <p>Ph# (503)-444-1111</p>
+          <p>Ph# <%= order.phone %></p>
         </div>
 
         <hr>
 
         <div class="large-12 columns">
           <div class="large-4 medium-4 small-4 columns">
-            <p>Section<br/><b>300</b></p>
+            <p>Section<br/><b><%= order.section %></b></p>
           </div>
           <div class="large-4 medium-4 small-4 columns">
-            <p>Row<br/><b>F</b></p>
+            <p>Row<br/><b><%= order.row %></b></p>
           </div>
           <div class="large-4 medium-4 small-4 columns">
-            <p>Seat<br/><b>Q</b></p>
+            <p>Seat<br/><b><%= order.seat %></b></p>
           </div>
         </div>
 
