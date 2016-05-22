@@ -1,0 +1,5 @@
+$("#order_<%= @order.id %>").hide();
+
+// counters updated
+$("#orders_pending").text("<%= pending %>");
+$("#orders_done").text("<%= done %>");

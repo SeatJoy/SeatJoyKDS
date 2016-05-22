@@ -44,7 +44,7 @@
 
     <div class="large-12 columns">
       <br/>
-      <a href="#" class="button expanded" data-behavior="mark-as-done" data-order-id="<%= order.id %>">Mark as Done</a>
+      <%= link_to "Mark as Done", mark_as_done_order_path(order), remote: true, method: :put, class: "button expanded" %>
     </div>
   </div>
 </div>
