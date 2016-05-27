@@ -6,5 +6,7 @@ Rails.application.routes.draw do
     end
   end
 
+  get "/admin" => "admin/dashboard#index"
+
   root "home#index"
 end
