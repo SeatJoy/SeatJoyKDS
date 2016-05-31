@@ -16,7 +16,17 @@
 //= require admin/modernizr.custom
 //= require admin/bootstrap
 //= require admin/jquery.browser
+//= require admin/colors
 //= require admin/bootstrap-filestyle
+
+//= require admin/jquery.flot
+//= require admin/jquery.flot.tooltip
+//= require admin/jquery-jvectormap-1.2.2.min
+//= require admin/jquery-jvectormap-us-mill-en
+//= require admin/jquery-jvectormap-world-mill-en
+//= require admin/jquery.easypiechart
+//= require admin/bootstrap-datepicker
+
 //= require admin/screenfull
 //= require admin/index
 //= require admin/d3

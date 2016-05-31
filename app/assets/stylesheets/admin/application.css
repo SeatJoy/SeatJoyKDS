@@ -21,5 +21,6 @@
  *= require admin/rickshaw
  *= require admin/summernote
  *= require admin/jquery.bootgrid
+ *= require admin/colors
  *= require admin/app
  */
