@@ -10,11 +10,11 @@ puts "Setting up sample orders..."
 
 15.times do |i|
   Order.create({
-    phone: "(503)-444-1111",
-    section: ("250".."350").to_a.sample,
-    row:     ("A".."Z").to_a.sample,
-    seat:    ("A".."Z").to_a.sample,
-    status:  "pending"
+    game:         "LA Galaxy vs. Toronto Raptors",
+    phone:        "(503)-444-1111",
+    seat_address: "G/23/45",  # section / row / seat
+    status:       "pending",
+    stadium:      "Stadium A"
   })
 
   print "."
@@ -24,11 +24,11 @@ end
 
 4.times do |i|
   Order.create({
-    phone: "(503)-444-1111",
-    section: ("250".."350").to_a.sample,
-    row:     ("A".."Z").to_a.sample,
-    seat:    ("A".."Z").to_a.sample,
-    status:  "done"
+    game:         "LA Galaxy vs. Toronto Raptors",
+    phone:        "(503)-444-1111",
+    seat_address: "G/23/45",  # section / row / seat
+    status:       "done",
+    stadium:      "Stadium B"
   })
 
   print "."
