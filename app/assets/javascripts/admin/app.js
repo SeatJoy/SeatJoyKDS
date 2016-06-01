@@ -874,19 +874,6 @@
                 [9, 45],
                 [10, 43]
             ]
-        }, {
-            data: [
-                [1, 35],
-                [2, 35],
-                [3, 17],
-                [4, 29],
-                [5, 10],
-                [6, 7],
-                [7, 35],
-                [8, 35],
-                [9, 17],
-                [10, 29]
-            ]
         }];
 
         var stackedChartOptions = {
@@ -905,7 +892,7 @@
                     }]
                 }
             },
-            colors: [Colors.byName('blue-100'), Colors.byName('blue-500')],
+            colors: [Colors.byName('blue-500'), Colors.byName('blue-500')],
             series: {
                 shadowSize: 3
             },
@@ -914,15 +901,15 @@
                 position: 'bottom',
                 ticks: 10,
                 font: {
-                    color: Colors.byName('blueGrey-200')
+                    color: Colors.byName('blueGrey-700')
                 }
             },
             yaxis: {
-                show: false,
+                show: true,
                 min: 0,
                 max: 60,
                 font: {
-                    color: Colors.byName('blueGrey-200')
+                    color: Colors.byName('blueGrey-700')
                 }
             },
             grid: {
