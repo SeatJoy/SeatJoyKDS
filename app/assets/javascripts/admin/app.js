@@ -30,9 +30,6 @@
 
         if (!$.fn.plot) return;
 
-        // Dont run if charts page not loaded
-        if (!$('#bar-flotchart').length) return;
-
         // BAR
         // -----------------------------------
         $.get('server/chart/bar.json', function(data) {
@@ -301,19 +298,15 @@
             $('#line-flotchart').plot(lineData, lineOptions);
         });
 
-        // PIE
+        // PIE - Total Customers
         // -----------------------------------
         var pieData = [{
-            'label': 'CSS',
+            'label': 'New',
             'color': '#009688',
-            'data': 40
+            'data': 130
         }, {
-            'label': 'LESS',
+            'label': 'Repeating',
             'color': '#FFC107',
-            'data': 90
-        }, {
-            'label': 'SASS',
-            'color': '#FF7043',
             'data': 75
         }];
         var pieOptions = {
@@ -339,7 +332,7 @@
             }
         };
 
-        $('#pie-flotchart').plot(pieData, pieOptions);
+        $('#pie-flotchart-total-customers').plot(pieData, pieOptions);
 
         // DONUT
         // -----------------------------------

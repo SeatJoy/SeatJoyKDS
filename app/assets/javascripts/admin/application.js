@@ -20,7 +20,13 @@
 //= require admin/bootstrap-filestyle
 
 //= require admin/jquery.flot
+//= require admin/jquery.flot.categories
+//= require admin/jquery.flot.spline
 //= require admin/jquery.flot.tooltip
+//= require admin/jquery.flot.resize
+//= require admin/jquery.flot.pie
+//= require admin/jquery.flot.time
+//= require admin/jquery.flot.orderBars
 //= require admin/jquery-jvectormap-1.2.2.min
 //= require admin/jquery-jvectormap-us-mill-en
 //= require admin/jquery-jvectormap-world-mill-en
@@ -39,7 +45,8 @@
 //= require admin/jquery.bootgrid
 //= require admin/jquery.bootgrid.fa
 //= require admin/masonry.pkgd
-//= require admin/masonry.pkgd
+
+//= require admin/loaders.css.js
 
 //= require admin/blueimp-helper
 //= require admin/blueimp-gallery
