@@ -32,7 +32,7 @@
 
         // BAR
         // -----------------------------------
-        $.get('server/chart/bar.json', function(data) {
+        $.get('admin/payments/total.json', function(data) {
 
             var barData = data;
             var barOptions = {
@@ -67,7 +67,7 @@
                 xaxis: {
                     tickColor: 'rgba(162,162,162,.26)',
                     font: {
-                        color: Colors.byName('blueGrey-200')
+                        color: Colors.byName('blueGrey-700')
                     },
                     mode: 'categories'
                 },
@@ -75,13 +75,67 @@
                     // position: (isRTL ? 'right' : 'left'),
                     tickColor: 'rgba(162,162,162,.26)',
                     font: {
-                        color: Colors.byName('blueGrey-200')
+                        color: Colors.byName('blueGrey-700')
                     }
                 },
                 shadowSize: 0
             };
 
-            $('#bar-flotchart').plot(barData, barOptions);
+            $('#bar-flotchart-total-payments').plot(barData, barOptions);
+        });
+
+        // BAR
+        // -----------------------------------
+        $.get('admin/payments/average.json', function(data) {
+
+            var barData = data;
+            var barOptions = {
+                series: {
+                    bars: {
+                        align: 'center',
+                        lineWidth: 0,
+                        show: true,
+                        barWidth: 0.6,
+                        fill: true,
+                        fillColor: {
+                            colors: [{
+                                opacity: 0.8
+                            }, {
+                                opacity: 0.5
+                            }]
+                        }
+                    }
+                },
+                grid: {
+                    borderColor: 'rgba(162,162,162,.26)',
+                    borderWidth: 1,
+                    hoverable: true,
+                    backgroundColor: 'transparent'
+                },
+                tooltip: true,
+                tooltipOpts: {
+                    content: function(label, x, y) {
+                        return x + ' : ' + y;
+                    }
+                },
+                xaxis: {
+                    tickColor: 'rgba(162,162,162,.26)',
+                    font: {
+                        color: Colors.byName('blueGrey-700')
+                    },
+                    mode: 'categories'
+                },
+                yaxis: {
+                    // position: (isRTL ? 'right' : 'left'),
+                    tickColor: 'rgba(162,162,162,.26)',
+                    font: {
+                        color: Colors.byName('blueGrey-700')
+                    }
+                },
+                shadowSize: 0
+            };
+
+            $('#bar-flotchart-average-payments').plot(barData, barOptions);
         });
 
 
