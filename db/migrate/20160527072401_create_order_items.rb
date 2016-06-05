@@ -4,6 +4,7 @@ class CreateOrderItems < ActiveRecord::Migration
       t.integer :order_id
       t.integer :qty
       t.string  :title
+      t.decimal :amount
 
       t.timestamps null: false
     end
