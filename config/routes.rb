@@ -10,8 +10,9 @@ Rails.application.routes.draw do
   get "/admin/reports" => "admin/reports#index"
 
   namespace :admin, path: "admin/payments" do
-    get "/total"   => "payments#total"
-    get "/average" => "payments#average"
+    get "/total"     => "payments#total"
+    get "/total_day" => "payments#total_day"
+    get "/average"   => "payments#average"
   end
 
   root "home#index"

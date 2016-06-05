@@ -306,7 +306,7 @@
 
         // LINE
         // -----------------------------------
-        $.get('server/chart/line.json', function(data) {
+        $.get('admin/payments/total_day.json', function(data) {
 
             var lineData = data;
             var lineOptions = {
