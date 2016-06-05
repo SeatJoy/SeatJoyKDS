@@ -6,7 +6,8 @@ Rails.application.routes.draw do
     end
   end
 
-  get "/admin" => "admin/dashboard#index"
+  get "/admin"         => "admin/dashboard#index"
+  get "/admin/reports" => "admin/reports#index"
 
   root "home#index"
 end
