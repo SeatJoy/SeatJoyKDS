@@ -1,7 +1,7 @@
 <div class="layout-container">
   <main class="main-container" style="margin-left:0px;">
 
-    <div class="jumbotron">
+    <div class="jumbotron" style="margin-bottom:0px">
       <div class="container">
         <%= image_tag "logo-2.png" %>
         <p>Simple Ordering Design</p>
@@ -25,14 +25,26 @@
       </div>
 
       <div class="row">
-        <% 4.times do |i| %>
+        <% orders.each do |order| %>
           <div class="col-lg-3">
-            <div id="panelDemo7" class="panel panel-default">
+            <div id="panelDemo7" class="panel panel-default" style="font-size:15px">
               <div class="panel-heading">
-                <div class="panel-title">Default Panel</div>
+                <div class="panel-title">
+                  Order #<%= order.id %> - <%= order.created_at.strftime("%I:%M:%S") %>
+                </div>
               </div>
               <div class="panel-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+                <p>Ph# <%= order.phone %></p>
+                <p>Seat Address <b><%= order.seat_address %></b></p>
+
+                <hr>
+
+                <% [2,3,4].sample.times do |i| %>
+                  <%= ["Hotdog", "M Coke", "S Curly Fries", "Hamburger"].sample %> -
+                  <%= [1, 2, 3].sample %>
+                  <br/>
+                <% end %>
+
               </div>
               <div class="panel-footer">
                 <button type="button" class="btn btn-primary btn-xl" style="display: block; width: 100%;">Mark as Done<span class="md-ripple"></span></button>
