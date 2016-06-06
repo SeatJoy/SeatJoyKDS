@@ -12,46 +12,22 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="well" style="text-align:center">
-            <h2>23</h4>
+            <!-- hidden temporaly - there're others AJAX call being made -->
+            <!-- <div id="loader_spinner" style="display:none;"><%= image_tag "loader.gif" %></div> -->
+            <h2 id="orders_pending"><%= @pending %></h2>
             <h6 class="mt0">Pending</h6>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="well" style="text-align:center">
-            <h2>15</h4>
+            <h2 id="orders_done"><%= @done %></h2>
             <h6 class="mt0">Done</h6>
           </div>
         </div>
       </div>
 
-      <div class="row">
-        <% orders.each do |order| %>
-          <div class="col-lg-3">
-            <div id="panelDemo7" class="panel panel-default" style="font-size:15px">
-              <div class="panel-heading">
-                <div class="panel-title">
-                  Order #<%= order.id %> - <%= order.created_at.strftime("%I:%M:%S") %>
-                </div>
-              </div>
-              <div class="panel-body">
-                <p>Ph# <%= order.phone %></p>
-                <p>Seat Address <b><%= order.seat_address %></b></p>
-
-                <hr>
-
-                <% [2,3,4].sample.times do |i| %>
-                  <%= ["Hotdog", "M Coke", "S Curly Fries", "Hamburger"].sample %> -
-                  <%= [1, 2, 3].sample %>
-                  <br/>
-                <% end %>
-
-              </div>
-              <div class="panel-footer">
-                <button type="button" class="btn btn-primary btn-xl" style="display: block; width: 100%;">Mark as Done<span class="md-ripple"></span></button>
-              </div>
-            </div>
-          </div>
-        <% end %>
+      <div id="orders" class="row">
+        <%= render orders %>
       </div>
     </div>
 

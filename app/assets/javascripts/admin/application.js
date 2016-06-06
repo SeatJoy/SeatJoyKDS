@@ -57,4 +57,6 @@
 //= require admin/blueimp-gallery-youtube
 //= require admin/jquery.blueimp-gallery
 
+//= require orders
+
 //= require admin/app

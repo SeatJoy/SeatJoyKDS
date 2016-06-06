@@ -1,0 +1,37 @@
+<div id="order_<%= order.id %>" class="column">
+  <div class="large-12 columns callout">
+    <div class="large-6 medium-6 small-6 columns">
+      <p>Order #<%= order.id %></p>
+    </div>
+    <div class="large-6 medium-6 small-6 columns" style="text-align:right;">
+      <b><%= order.created_at.strftime("%I:%M:%S") %></b>
+    </div>
+
+    <div class="large-12 columns">
+      <p>Ph# <%= order.phone %></p>
+    </div>
+
+    <hr>
+
+    <div class="large-12 columns">
+      <p>Seat Address <b><%= order.seat_address %></b></p>
+    </div>
+
+    <hr>
+
+    <% [2,3,4].sample.times do |i| %>
+      <div class="large-12 columns">
+        <div class="large-8 medium-8 small-8 columns">
+          <%= ["Hotdog", "M Coke", "S Curly Fries", "Hamburger"].sample %>
+        </div>
+        <div class="large-4 medium-4 small-4 columns">
+          <%= [1, 2, 3].sample %>
+        </div>
+      </div>
+    <% end %>
+
+    <div class="large-12 columns">
+      <%= link_to "Mark as Done", mark_as_done_order_path(order), remote: true, method: :put, class: "button expanded" %>
+    </div>
+  </div>
+</div>

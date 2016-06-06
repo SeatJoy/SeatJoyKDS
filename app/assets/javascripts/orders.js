@@ -1,3 +1,3 @@
 $(document).ajaxStart(function(){
-  $("#loader").show();
+  $("#loader_spinner").show();
 });

@@ -1,37 +1,25 @@
-<div id="order_<%= order.id %>" class="column">
-  <div class="large-12 columns callout">
-    <div class="large-6 medium-6 small-6 columns">
-      <p>Order #<%= order.id %></p>
-    </div>
-    <div class="large-6 medium-6 small-6 columns" style="text-align:right;">
-      <b><%= order.created_at.strftime("%I:%M:%S") %></b>
-    </div>
-
-    <div class="large-12 columns">
-      <p>Ph# <%= order.phone %></p>
-    </div>
-
-    <hr>
-
-    <div class="large-12 columns">
-      <p>Seat Address <b><%= order.seat_address %></b></p>
-    </div>
-
-    <hr>
-
-    <% [2,3,4].sample.times do |i| %>
-      <div class="large-12 columns">
-        <div class="large-8 medium-8 small-8 columns">
-          <%= ["Hotdog", "M Coke", "S Curly Fries", "Hamburger"].sample %>
-        </div>
-        <div class="large-4 medium-4 small-4 columns">
-          <%= [1, 2, 3].sample %>
-        </div>
+<div id="order_<%= order.id %>" class="col-lg-3">
+  <div id="panelDemo7" class="panel panel-default" style="font-size:15px">
+    <div class="panel-heading">
+      <div class="panel-title">
+        Order #<%= order.id %> - <%= order.created_at.strftime("%I:%M:%S") %>
       </div>
-    <% end %>
+    </div>
+    <div class="panel-body">
+      <p>Ph# <%= order.phone %></p>
+      <p>Seat Address <b><%= order.seat_address %></b></p>
 
-    <div class="large-12 columns">
-      <%= link_to "Mark as Done", mark_as_done_order_path(order), remote: true, method: :put, class: "button expanded" %>
+      <hr>
+
+      <% [1,2,3].sample.times do |i| %>
+        <%= ["Hotdog", "M Coke", "S Curly Fries", "Hamburger"].sample %> -
+        <%= [1, 2, 3].sample %>
+        <br/>
+      <% end %>
+    </div>
+
+    <div class="panel-footer">
+      <%= link_to "Mark as Done", mark_as_done_order_path(order), remote: true, method: :put, class: "btn btn-primary btn-xl", style: "display: block; width: 100%;" %>
     </div>
   </div>
 </div>
