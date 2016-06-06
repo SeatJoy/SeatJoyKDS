@@ -1,10 +1,4 @@
-class Admin::ReportsController < ApplicationController
-
-  layout "admin"
-
-  def index
-    
-  end
+class Admin::ReportsController < Admin::BaseController
 
   def orders_graph
     render json: [{
@@ -20,5 +14,11 @@ class Admin::ReportsController < ApplicationController
         ["L Hamburger", 44]
       ]
     }]
+  end
+
+  private
+
+  def set_nav_bar_klass
+    @reports_klass = "active"
   end
 end

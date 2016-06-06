@@ -2484,7 +2484,8 @@
         var $sidebarNav = $('.sidebar-nav');
         var $sidebarContent = $('.sidebar-content');
 
-        activate($sidebarNav);
+        // Sidebar menues highlighting handled via Rails controllers
+        // activate($sidebarNav);
 
         $sidebarNav.on('click', function(event) {
             var item = getItemElement(event);

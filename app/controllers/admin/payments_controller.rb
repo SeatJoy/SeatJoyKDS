@@ -1,6 +1,4 @@
-class Admin::PaymentsController < ApplicationController
-
-  layout "admin"
+class Admin::PaymentsController < Admin::BaseController
 
   def total
     render json: [{
