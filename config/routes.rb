@@ -6,8 +6,12 @@ Rails.application.routes.draw do
     end
   end
 
-  get "/admin"         => "admin/dashboard#index"
-  get "/admin/reports" => "admin/reports#index"
+  get "/admin" => "admin/dashboard#index"
+
+  namespace :admin, path: "admin/reports" do
+    get "/"             => "reports#index"
+    get "/orders_graph" => "reports#orders_graph"
+  end
 
   namespace :admin, path: "admin/payments" do
     get "/total"     => "payments#total"
