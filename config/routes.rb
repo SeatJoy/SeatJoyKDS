@@ -15,5 +15,6 @@ Rails.application.routes.draw do
     get "/average"   => "payments#average"
   end
 
+  get  "/index2"      => "home#index2"
   root "home#index"
 end

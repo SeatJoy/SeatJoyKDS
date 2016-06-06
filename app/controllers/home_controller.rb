@@ -7,6 +7,10 @@ class HomeController < ApplicationController
   def index
   end
 
+  def index2
+    render layout: "admin"
+  end
+
   private
 
   def orders

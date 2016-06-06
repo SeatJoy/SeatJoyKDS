@@ -1,0 +1,47 @@
+<div class="layout-container">
+  <main class="main-container" style="margin-left:0px;">
+
+    <div class="jumbotron">
+      <div class="container">
+        <%= image_tag "logo-2.png" %>
+        <p>Simple Ordering Design</p>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="well" style="text-align:center">
+            <h2>23</h4>
+            <h6 class="mt0">Pending</h6>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="well" style="text-align:center">
+            <h2>15</h4>
+            <h6 class="mt0">Done</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <% 4.times do |i| %>
+          <div class="col-lg-3">
+            <div id="panelDemo7" class="panel panel-default">
+              <div class="panel-heading">
+                <div class="panel-title">Default Panel</div>
+              </div>
+              <div class="panel-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+              </div>
+              <div class="panel-footer">
+                <button type="button" class="btn btn-primary btn-xl" style="display: block; width: 100%;">Mark as Done<span class="md-ripple"></span></button>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+  </main>
+</div>
