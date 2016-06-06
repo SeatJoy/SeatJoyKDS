@@ -11,7 +11,7 @@
 
     <nav class="sidebar-nav">
       <ul>
-        <li>
+        <li class="<%= @dashboard_klass %>">
           <a href="/admin" class="ripple">
             <span class="pull-right nav-label">
               <!-- <span class="badge bg-success">2</span> -->
@@ -22,7 +22,7 @@
             <span>Dashboard</span>
           </a>
         </li>
-        <li>
+        <li class="<%= @reports_klass %>">
           <a href="/admin/reports" class="ripple">
             <span class="pull-right nav-label"></span>
             <span class="nav-icon">
