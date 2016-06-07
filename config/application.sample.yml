@@ -1,0 +1,12 @@
+development: &development
+
+  app_user_name: "abhinav"
+  app_password:  "password"
+
+test:
+  <<: *development
+
+production:
+
+  app_user_name: "abhinav"
+  app_password:  "password"
