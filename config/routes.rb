@@ -19,5 +19,9 @@ Rails.application.routes.draw do
     get "/average"   => "payments#average"
   end
 
+  namespace :admin, path: "admin/inventory" do
+    get "/"          => "inventory#index"
+  end
+
   root "home#index"
 end
