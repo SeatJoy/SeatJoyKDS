@@ -32,7 +32,7 @@
 
         // BAR
         // -----------------------------------
-        $.get('admin/payments/total.json', function(data) {
+        $.get('/admin/payments/total.json', function(data) {
 
             var barData = data;
             var barOptions = {
@@ -86,7 +86,7 @@
 
         // BAR - Average Payments
         // -----------------------------------
-        $.get('admin/payments/average.json', function(data) {
+        $.get('/admin/payments/average.json', function(data) {
 
             var barData = data;
             var barOptions = {
@@ -140,7 +140,7 @@
 
         // BAR - Orders Statistics
         // -----------------------------------
-        $.get('reports/orders_graph.json', function(data) {
+        $.get('/admin/reports/orders_graph.json', function(data) {
 
             var barData = data;
             var barOptions = {
@@ -360,7 +360,7 @@
 
         // LINE
         // -----------------------------------
-        $.get('admin/payments/total_day.json', function(data) {
+        $.get('/admin/payments/total_day.json', function(data) {
 
             var lineData = data;
             var lineOptions = {

@@ -18,86 +18,194 @@
           </div> -->
         </div>
       </div>
+
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-xs-6 col-lg-3">
-            <div class="card">
-              <div class="card-body pv">
-                <div class="clearfix">
-                  <div class="pull-left">
-                    <h4 class="m0 text-thin">350</h4><small class="m0 text-muted"><em class="mr-sm ion-arrow-up-b"></em>Total orders</small>
-                  </div>
-                  <div class="pull-right mt-lg">
-                    <div id="sparkline2" data-line-color="#4caf50" class="sparkline"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-6 col-lg-3">
-            <div class="card">
-              <div class="card-body pv">
-                <div class="clearfix">
-                  <div class="pull-left">
-                    <h4 class="m0 text-thin">10,200</h4><small class="m0 text-muted"><em class="mr-sm ion-arrow-up-b"></em>Orders delivered</small>
-                  </div>
-                  <div class="pull-right mt-lg">
-                    <div id="sparkline1" data-line-color="#03A9F4" class="sparkline"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-6 col-lg-3 visible-lg">
-            <div class="card">
-              <div class="card-body pv">
-                <div class="clearfix">
-                  <div class="pull-left">
-                    <h4 class="m0 text-thin">880</h4><small class="m0 text-muted"><em class="mr-sm ion-arrow-up-b"></em>Runners</small>
-                  </div>
-                  <div class="pull-right mt-lg">
-                    <div id="sparkline3" data-line-color="#ab47bc" class="sparkline"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-6 col-lg-3 visible-lg">
-            <div class="card">
-              <div class="card-body pv">
-                <div class="clearfix">
-                  <div class="pull-left">
-                    <h4 class="m0 text-thin">780</h4><small class="m0 text-muted"><em class="mr-sm ion-arrow-up-b"></em>Payments made</small>
-                  </div>
-                  <div class="pull-right mt-lg">
-                    <div id="sparkline4" data-line-color="#e91e63" class="sparkline"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <h5 class="mt0">Hourly Sales</h5>
+        <div class="card">
+          <div class="table-responsive bootgrid">
+            <table id="bootgrid-basic" class="table table-striped">
+              <thead>
+                <tr>
+                  <th data-column-id="time-range">Time Range</th>
+                  <th data-column-id="transactions"># Transactions</th>
+                  <th data-column-id="items"># Items</th>
+                  <th data-column-id="avg-sales-check">Avg. Sales/Check</th>
+                  <th data-column-id="sales">Sales</th>
+                  <th data-column-id="sales-percentage">% Sales</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10:00AM - 10:59AM</td>
+                  <td><%= (1..50).to_a.sample %></td>
+                  <td><%= (10..500).to_a.sample %></td>
+                  <td><%= (10..25).to_a.sample %></td>
+                  <td><%= (700..1500).to_a.sample %></td>
+                  <td>% <%= (7..70).to_a.sample %></td>
+                </tr>
+                <tr>
+                  <td>11:00AM - 11:59AM</td>
+                  <td><%= (1..50).to_a.sample %></td>
+                  <td><%= (10..500).to_a.sample %></td>
+                  <td><%= (10..25).to_a.sample %></td>
+                  <td><%= (700..1500).to_a.sample %></td>
+                  <td>% <%= (7..70).to_a.sample %></td>
+                </tr>
+                <tr>
+                  <td>12:00PM - 12:59PM</td>
+                  <td><%= (1..50).to_a.sample %></td>
+                  <td><%= (10..500).to_a.sample %></td>
+                  <td><%= (10..25).to_a.sample %></td>
+                  <td><%= (700..1500).to_a.sample %></td>
+                  <td>% <%= (7..70).to_a.sample %></td>
+                </tr>
+                <tr>
+                  <td>01:00PM - 01:59PM</td>
+                  <td><%= (1..50).to_a.sample %></td>
+                  <td><%= (10..500).to_a.sample %></td>
+                  <td><%= (10..25).to_a.sample %></td>
+                  <td><%= (700..1500).to_a.sample %></td>
+                  <td>% <%= (7..70).to_a.sample %></td>
+                </tr>
+                <tr>
+                  <td>02:00PM - 02:59PM</td>
+                  <td><%= (1..50).to_a.sample %></td>
+                  <td><%= (10..500).to_a.sample %></td>
+                  <td><%= (10..25).to_a.sample %></td>
+                  <td><%= (700..1500).to_a.sample %></td>
+                  <td>% <%= (7..70).to_a.sample %></td>
+                </tr>
+                <tr>
+                  <td>03:00PM - 03:59PM</td>
+                  <td><%= (1..50).to_a.sample %></td>
+                  <td><%= (10..500).to_a.sample %></td>
+                  <td><%= (10..25).to_a.sample %></td>
+                  <td><%= (700..1500).to_a.sample %></td>
+                  <td>% <%= (7..70).to_a.sample %></td>
+                </tr>
+                <tr>
+                  <td>04:00PM - 04:59PM</td>
+                  <td><%= (1..50).to_a.sample %></td>
+                  <td><%= (10..500).to_a.sample %></td>
+                  <td><%= (10..25).to_a.sample %></td>
+                  <td><%= (700..1500).to_a.sample %></td>
+                  <td>% <%= (7..70).to_a.sample %></td>
+                </tr>
+                <tr>
+                  <td>05:00PM - 06:59PM</td>
+                  <td><%= (1..50).to_a.sample %></td>
+                  <td><%= (10..500).to_a.sample %></td>
+                  <td><%= (10..25).to_a.sample %></td>
+                  <td><%= (700..1500).to_a.sample %></td>
+                  <td>% <%= (7..70).to_a.sample %></td>
+                </tr>
+                <tr>
+                  <td>07:00PM - 07:59PM</td>
+                  <td><%= (1..50).to_a.sample %></td>
+                  <td><%= (10..500).to_a.sample %></td>
+                  <td><%= (10..25).to_a.sample %></td>
+                  <td><%= (700..1500).to_a.sample %></td>
+                  <td>% <%= (7..70).to_a.sample %></td>
+                </tr>
+                <tr>
+                  <td>08:00PM - 08:59PM</td>
+                  <td><%= (1..50).to_a.sample %></td>
+                  <td><%= (10..500).to_a.sample %></td>
+                  <td><%= (10..25).to_a.sample %></td>
+                  <td><%= (700..1500).to_a.sample %></td>
+                  <td>% <%= (7..70).to_a.sample %></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
+      </div>
 
+      <div class="container-fluid">
+        <h5 class="mt0">Payments overview</h5>
         <div class="row">
           <div class="col-lg-12">
             <div class="card">
               <div class="card-heading">
-                <div class="card-title">Orders Statistics</div><small>Based on the last hours.</small>
+                <div class="card-title">Total Payments - 2824.75</div>
               </div>
               <div class="card-body">
-                <div id="bar-flotchart-orders-graph" class="flot-chart flot-chart-lg"></div>
+                <div id="line-flotchart" class="flot-chart flot-chart-lg"></div>
               </div>
             </div>
           </div>
-          <div class="col-lg-12">
-            <div class="card">
-              <%= image_tag "stadium.png", style: "width:75%" %>
+
+          <div class="col-lg-2">
+            <div class="well well-lg">
+              <h6 class="mt0">Credit (incl. tips)</h6>
+              <h4>1073.75</h4>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="well well-lg">
+              <h6 class="mt0">Actual Cash (incl. tips)</h6>
+              <h6 class="mt0"></h6>
+              <h4>1764.75</h4>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="well well-lg">
+              <h6 class="mt0">Total Discounts</h6>
+              <h4>147.75</h4>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="well well-lg">
+              <h6 class="mt0">Sales Tax</h6>
+              <h4>231.53</h4>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="well well-lg">
+              <h6 class="mt0">Net Sales (incl. tips)</h6>
+              <h4>2593.23</h4>
             </div>
           </div>
         </div>
-
       </div>
+
+      <div class="container-fluid">
+        <h5 class="mt0">Customer Insight</h5>
+        <h6 class="mt0">Last 200 payments</h6>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-heading">
+                <div class="card-title">Total Customers</div>
+              </div>
+              <div class="card-body">
+                <div id="pie-flotchart-total-customers" class="flot-chart flot-chart-lg"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-heading">
+                <div class="card-title">Total Payments</div>
+              </div>
+              <div class="card-body">
+                <div id="bar-flotchart-total-payments" class="flot-chart flot-chart-lg"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-heading">
+                <div class="card-title">Average Payments</div>
+              </div>
+              <div class="card-body">
+                <div id="bar-flotchart-average-payments" class="flot-chart flot-chart-lg"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </section>
   </main>
-
 </div>
