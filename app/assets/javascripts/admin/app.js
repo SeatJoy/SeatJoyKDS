@@ -442,6 +442,42 @@
 
         $('#pie-flotchart-total-customers').plot(pieData, pieOptions);
 
+        // PIE - Orders Taken vs. Delivered
+        // -----------------------------------
+        var pieData = [{
+            'label': 'Taken',
+            'color': '#009688',
+            'data': 50
+        }, {
+            'label': 'Delivered',
+            'color': '#FFC107',
+            'data': 145
+        }];
+        var pieOptions = {
+            series: {
+                pie: {
+                    show: true,
+                    innerRadius: 0,
+                    label: {
+                        show: true,
+                        radius: 0.8,
+                        formatter: function(label, series) {
+                            return '<div class="flot-pie-label">' +
+                                //label + ' : ' +
+                                Math.round(series.percent) +
+                                '%</div>';
+                        },
+                        background: {
+                            opacity: 0.8,
+                            color: '#222'
+                        }
+                    }
+                }
+            }
+        };
+
+        $('#pie-flotchart-orders-taken-delivered').plot(pieData, pieOptions);
+
         // DONUT
         // -----------------------------------
         var donutData = [{
