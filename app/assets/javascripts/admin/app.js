@@ -442,10 +442,10 @@
 
         $('#pie-flotchart-total-customers').plot(pieData, pieOptions);
 
-        // PIE - Orders Taken vs. Delivered
+        // PIE - Orders Pending vs. Delivered
         // -----------------------------------
         var pieData = [{
-            'label': 'Taken',
+            'label': 'Pending',
             'color': '#009688',
             'data': 50
         }, {
@@ -476,7 +476,7 @@
             }
         };
 
-        $('#pie-flotchart-orders-taken-delivered').plot(pieData, pieOptions);
+        $('#pie-flotchart-orders-pending-delivered').plot(pieData, pieOptions);
 
         // DONUT
         // -----------------------------------
