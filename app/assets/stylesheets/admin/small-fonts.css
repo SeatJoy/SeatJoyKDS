@@ -1,5 +1,10 @@
-.small-mt0 {
-  line-height:0px;
+h5.small-mt0 {
+  font-size: 15px !important;
+}
+
+h6.small-mt0 {
+  font-size: 15px !important;
+  line-height: 0px;
   margin-bottom:0px;
 }
 
