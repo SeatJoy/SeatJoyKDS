@@ -7,20 +7,10 @@
   <main class="main-container">
     <!-- Page content-->
     <section>
-      <div class="content-heading bg-white">
-        <div class="row">
-          <div class="col-sm-9">
-            <h4 class="m0 text-thin">Game: San Jose Spartans vs. LA Galaxy</h4>
-            <!-- <small>Bootstrap admin dashboard template</small> -->
-          </div>
-<!--           <div class="col-sm-3 text-right hidden-xs">
-            <button type="button" class="mt-sm btn btn-labeled btn-default ripple">Apps<span class="btn-label btn-label-right"><i class="ion-plus-round"></i></span></button>
-          </div> -->
-        </div>
-      </div>
+      <%= render partial: "admin/shared/game_header" %>
 
       <div class="container-fluid">
-        <h5 class="mt0">Hourly Sales</h5>
+        <h6 class="mt0 small-mt0">Hourly Sales</h6><br/>
         <button type="button" class="mb-sm btn btn-primary ripple">Download CSV<span class="md-ripple"></span></button>
         <div class="card">
           <div class="table-responsive bootgrid">
@@ -123,13 +113,13 @@
       </div>
 
       <div class="container-fluid">
-        <h5 class="mt0">Payments overview</h5>
+        <h6 class="mt0 small-mt0">Payments overview</h6><br/>
         <button type="button" class="mb-sm btn btn-primary ripple">Download CSV<span class="md-ripple"></span></button>
         <div class="row">
           <div class="col-lg-12">
             <div class="card">
               <div class="card-heading">
-                <div class="card-title">Orders Statistics</div><small>Based on the last hours.</small>
+                <div class="card-title small-card-title">Orders Statistics</div><small>Based on the last hours.</small>
               </div>
               <div class="card-body">
                 <div id="bar-flotchart-orders-graph" class="flot-chart flot-chart-lg"></div>
@@ -141,7 +131,7 @@
             <button type="button" class="mb-sm btn btn-primary ripple">Download CSV<span class="md-ripple"></span></button>
             <div class="card">
               <div class="card-heading">
-                <div class="card-title">Total Payments - 2824.75</div>
+                <div class="card-title small-card-title">Total Payments - 2824.75</div>
               </div>
               <div class="card-body">
                 <div id="line-flotchart" class="flot-chart flot-chart-lg"></div>
@@ -151,33 +141,33 @@
 
           <div class="col-lg-2">
             <div class="well well-lg">
-              <h6 class="mt0">Credit (incl. tips)</h6>
-              <h4>1073.75</h4>
+              <h6 class="mt0 small-mt0">Credit (incl. tips)</h6>
+              <h6>1073.75</h6>
             </div>
           </div>
           <div class="col-lg-3">
             <div class="well well-lg">
-              <h6 class="mt0">Actual Cash (incl. tips)</h6>
-              <h6 class="mt0"></h6>
-              <h4>1764.75</h4>
+              <h6 class="mt0 small-mt0">Actual Cash (incl. tips)</h6>
+              <h6 class="mt0 small-mt0"></h6>
+              <h6>1764.75</h6>
             </div>
           </div>
           <div class="col-lg-2">
             <div class="well well-lg">
-              <h6 class="mt0">Total Discounts</h6>
-              <h4>147.75</h4>
+              <h6 class="mt0 small-mt0">Total Discounts</h6>
+              <h6>147.75</h6>
             </div>
           </div>
           <div class="col-lg-2">
             <div class="well well-lg">
-              <h6 class="mt0">Sales Tax</h6>
-              <h4>231.53</h4>
+              <h6 class="mt0 small-mt0">Sales Tax</h6>
+              <h6>231.53</h6>
             </div>
           </div>
           <div class="col-lg-3">
             <div class="well well-lg">
-              <h6 class="mt0">Net Sales (incl. tips)</h6>
-              <h4>2593.23</h4>
+              <h6 class="mt0 small-mt0">Net Sales (incl. tips)</h6>
+              <h6>2593.23</h6>
             </div>
           </div>
         </div>
