@@ -9,21 +9,21 @@ Rails.application.routes.draw do
   namespace :admin do
     get "/"      => "dashboard#index"
     get "/login" => "dashboard#login"
-  end
 
-  namespace :admin, path: "admin/reports" do
-    get "/"             => "reports#index"
-    get "/orders_graph" => "reports#orders_graph"
-  end
+    scope :reports do
+      get "/"             => "reports#index"
+      get "/orders_graph" => "reports#orders_graph"
+    end
 
-  namespace :admin, path: "admin/payments" do
-    get "/total"     => "payments#total"
-    get "/total_day" => "payments#total_day"
-    get "/average"   => "payments#average"
-  end
+    scope :payments do
+      get "/total"        => "payments#total"
+      get "/total_day"    => "payments#total_day"
+      get "/average"      => "payments#average"
+    end
 
-  namespace :admin, path: "admin/inventory" do
-    get "/"          => "inventory#index"
+    scope :inventory do
+      get "/"             => "inventory#index"
+    end
   end
 
   root "home#index"
