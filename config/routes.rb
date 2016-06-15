@@ -6,7 +6,10 @@ Rails.application.routes.draw do
     end
   end
 
-  get "/admin" => "admin/dashboard#index"
+  namespace :admin do
+    get "/"      => "dashboard#index"
+    get "/login" => "dashboard#login"
+  end
 
   namespace :admin, path: "admin/reports" do
     get "/"             => "reports#index"
