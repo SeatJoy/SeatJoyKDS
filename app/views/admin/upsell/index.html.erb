@@ -1,0 +1,39 @@
+<div class="layout-container">
+  <%= render partial: "admin/shared/top_nav_bar" %>
+  <%= render partial: "admin/shared/side_bar" %>
+
+  <div class="sidebar-layout-obfuscator"></div>
+  <!-- Main section-->
+  <main class="main-container">
+    <!-- Page content-->
+    <section>
+      <%= render partial: "admin/shared/game_header" %>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="card">
+              <div class="card-heading">
+                <div class="card-title small-card-title">Total Payments</div>
+              </div>
+              <div class="card-body">
+                <div id="bar-flotchart-total-payments" class="flot-chart flot-chart-lg"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card">
+              <div class="card-heading">
+                <div class="card-title small-card-title">Average Payments</div>
+              </div>
+              <div class="card-body">
+                <div id="bar-flotchart-average-payments" class="flot-chart flot-chart-lg"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+</div>
