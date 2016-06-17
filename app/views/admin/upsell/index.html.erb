@@ -10,24 +10,101 @@
       <%= render partial: "admin/shared/game_header" %>
 
       <div class="container-fluid">
+
         <div class="row">
-          <div class="col-lg-3">
+          <div class="col-lg-4">
             <div class="card">
-              <div class="card-heading">
-                <div class="card-title small-card-title">Total Payments</div>
-              </div>
               <div class="card-body">
-                <div id="bar-flotchart-total-payments" class="flot-chart flot-chart-lg"></div>
+                <form method="get" action="/" class="form-horizontal">
+
+                  <h6 class="mt0">Filters</h6>
+                  <div class="col-sm-6">
+                    <label class="col-sm-4 control-label">Filter 1</label>
+                    <div class="col-sm-8">
+                      <div class="checkbox c-checkbox">
+                        <label>
+                          <input type="checkbox" value=""><span class="ion-checkmark-round"></span> 2-6
+                        </label>
+                      </div>
+                      <div class="checkbox c-checkbox">
+                        <label>
+                          <input type="checkbox" value=""><span class="ion-checkmark-round"></span> 6-10
+                        </label>
+                      </div>
+                      <div class="checkbox c-checkbox">
+                        <label>
+                          <input type="checkbox" value=""><span class="ion-checkmark-round"></span> 10-15
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label class="col-sm-4 control-label">Filter 2</label>
+                    <div class="col-sm-8">
+                      <div class="checkbox c-checkbox">
+                        <label>
+                          <input type="checkbox" value=""><span class="ion-checkmark-round"></span> 2-6
+                        </label>
+                      </div>
+                      <div class="checkbox c-checkbox">
+                        <label>
+                          <input type="checkbox" value=""><span class="ion-checkmark-round"></span> 6-10
+                        </label>
+                      </div>
+                      <div class="checkbox c-checkbox">
+                        <label>
+                          <input type="checkbox" value=""><span class="ion-checkmark-round"></span> 10-15
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-12"><br/><br/></div>
+
+                  <h6 class="mt0">Charts</h6>
+                  <div class="form-group">
+                    <div class="col-sm-12">
+                      <div class="checkbox c-checkbox">
+                        <label>
+                          <input type="checkbox" checked="" value=""><span class="ion-checkmark-round"></span> Boil
+                        </label>
+                      </div>
+                      <div class="checkbox c-checkbox">
+                        <label>
+                          <input type="checkbox" checked="" value=""><span class="ion-checkmark-round"></span> Water Source
+                        </label>
+                      </div>
+                      <div class="checkbox c-checkbox">
+                        <label>
+                          <input type="checkbox" value=""><span class="ion-checkmark-round"></span> Another Graph
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
-          <div class="col-lg-3">
+
+          <div class="col-lg-4">
             <div class="card">
               <div class="card-heading">
-                <div class="card-title small-card-title">Average Payments</div>
+                <div class="card-title small-card-title">Boil</div>
               </div>
               <div class="card-body">
                 <div id="bar-flotchart-average-payments" class="flot-chart flot-chart-lg"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-heading">
+                <div class="card-title small-card-title">Water Source</div>
+              </div>
+              <div class="card-body">
+                <div id="pie-flotchart-orders-pending-delivered" class="flot-chart flot-chart-lg"></div>
               </div>
             </div>
           </div>
