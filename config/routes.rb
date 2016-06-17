@@ -8,10 +8,10 @@ Rails.application.routes.draw do
 
   namespace :admin do
     get "/"      => "dashboard#index"
-    get "/login" => "dashboard#login"
+    get "/login" => "dashboard#login",          as: :login
 
     scope :reports do
-      get "/"             => "reports#index"
+      get "/"             => "reports#index",   as: :reports
       get "/orders_graph" => "reports#orders_graph"
     end
 
@@ -22,7 +22,11 @@ Rails.application.routes.draw do
     end
 
     scope :inventory do
-      get "/"             => "inventory#index"
+      get "/"             => "inventory#index", as: :inventory
+    end
+
+    scope :upsell do
+      get "/"             => "upsell#index",    as: :upsell
     end
   end
 

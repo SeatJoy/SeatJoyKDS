@@ -21,48 +21,40 @@
     <nav class="sidebar-nav">
       <ul>
         <li class="<%= @dashboard_klass %>">
-          <a href="/admin" class="ripple">
-            <span class="pull-right nav-label">
-              <!-- <span class="badge bg-success">2</span> -->
-            </span>
+          <%= link_to admin_path, class: "ripple" do %>
+            <span class="pull-right nav-label"></span>
             <span class="nav-icon">
               <img src="" data-svg-replace="/assets/icons/aperture.svg" alt="MenuItem" class="hidden">
             </span>
             <span>Dashboard</span>
-          </a>
+          <% end %>
         </li>
         <li class="<%= @reports_klass %>">
-          <a href="/admin/reports" class="ripple">
+          <%= link_to admin_reports_path, class: "ripple" do %>
             <span class="pull-right nav-label"></span>
             <span class="nav-icon">
               <img src="" data-svg-replace="/assets/icons/radio-waves.svg" alt="MenuItem" class="hidden">
             </span>
             <span>Reports</span>
-          </a>
+          <% end %>
         </li>
         <li class="<%= @inventory_klass %>">
-          <a href="/admin/inventory" class="ripple">
-            <!-- <span class="pull-right nav-caret"><em class="ion-ios-arrow-right"></em></span> -->
+          <%= link_to admin_inventory_path, class: "ripple" do %>
             <span class="pull-right nav-label"></span>
             <span class="nav-icon">
               <img src="" data-svg-replace="/assets/icons/connection-bars.svg" alt="MenuItem" class="hidden">
             </span>
             <span>Inventory</span>
-          </a>
-<!--           <ul class="sidebar-subnav">
-            <li><a href="flot.html" class="ripple"><span class="pull-right nav-label"></span><span>Flot</span></a></li>
-            <li><a href="radial.html" class="ripple"><span class="pull-right nav-label"></span><span>Radial</span></a></li>
-            <li><a href="rickshaw.html" class="ripple"><span class="pull-right nav-label"></span><span>Rickshaw</span></a></li>
-          </ul> -->
+          <% end %>
         </li>
-        <li>
-          <a href="#" class="ripple">
+        <li class="<%= @upsell_klass %>">
+          <%= link_to admin_upsell_path, class: "ripple" do %>
             <span class="pull-right nav-label"></span>
             <span class="nav-icon">
               <img src="" data-svg-replace="/assets/icons/clipboard.svg" alt="MenuItem" class="hidden">
             </span>
-            <span>Settings</span>
-          </a>
+            <span>Upsell</span>
+          <% end %>
         </li>
         <li>
           <a href="#" class="ripple">
