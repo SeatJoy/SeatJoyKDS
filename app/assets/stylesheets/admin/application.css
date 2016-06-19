@@ -19,6 +19,7 @@
  *= require admin/blueimp-gallery-indicator
  *= require admin/blueimp-gallery-video
  *= require admin/rickshaw
+ *= require admin/nouislider.min
  *= require admin/summernote
  *= require admin/bootstrap-editable
  *= require admin/jquery.bootgrid

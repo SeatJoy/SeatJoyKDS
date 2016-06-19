@@ -41,6 +41,8 @@
 //= require admin/jquery.validate
 //= require admin/additional-methods
 
+//= require admin/nouislider
+
 //= require admin/summernote
 //= require admin/jquery.bootgrid
 //= require admin/jquery.bootgrid.fa
