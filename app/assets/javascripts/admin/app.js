@@ -1579,6 +1579,94 @@
 (function() {
     'use strict';
 
+    $(setupSliders);
+
+    function setupSliders() {
+      // UI SLider (noUiSlider)
+
+      $('.ui-slider').each(function() {
+
+          noUiSlider.create(this, {
+              start: $(this).data('start'),
+              connect: 'lower',
+              range: {
+                  'min': 0,
+                  'max': 100,
+              }
+          });
+      });
+
+      $('.ui-slider-with-top-value').each(function() {
+          var slider = this;
+
+          noUiSlider.create(this, {
+              start: $(this).data('start'),
+              step: 5,
+              connect: 'lower',
+              range: {
+                'min': 0,
+                'max': 90,
+              },
+              pips: { // Show a scale with the slider
+                mode:   'steps',
+                density: 2
+              }
+          });
+
+          slider.noUiSlider.on('slide', updateValues);
+          updateValues();
+
+          function updateValues() {
+              var values = slider.noUiSlider.get();
+              // Connecto to live values
+              console.log("values[0]: " + values[0])
+              console.log("values[1]: " + values[1])
+
+              $('#ui-slider-with-lower-value').html(values[0]);
+              $('#ui-slider-with-top-value').html(values[1]);
+          }
+      });
+
+      // Range selectable
+      $('.ui-slider-range').each(function() {
+          noUiSlider.create(this, {
+              start: [25, 75],
+              range: {
+                  'min': 0,
+                  'max': 100
+              },
+              connect: true
+          });
+
+      });
+
+      // Live Values
+      $('.ui-slider-values').each(function() {
+          var slider = this;
+
+          noUiSlider.create(slider, {
+              start: [35, 75],
+              connect: true,
+              // direction: 'rtl',
+              behaviour: 'tap-drag',
+              range: {
+                  'min': 0,
+                  'max': 100
+              }
+          });
+
+          slider.noUiSlider.on('slide', updateValues);
+          updateValues();
+
+          function updateValues() {
+              var values = slider.noUiSlider.get();
+              // Connecto to live values
+              $('#ui-slider-value-lower').html(values[0]);
+              $('#ui-slider-value-upper').html(values[1]);
+          }
+      });
+    }
+
     $(formAdvanced);
 
     function formAdvanced() {
@@ -1617,60 +1705,6 @@
         // auto close picker on scroll
         $('main').scroll(function() {
             cpInput.clockpicker('hide');
-        });
-
-
-        // UI SLider (noUiSlider)
-
-        $('.ui-slider').each(function() {
-
-            noUiSlider.create(this, {
-                start: $(this).data('start'),
-                connect: 'lower',
-                range: {
-                    'min': 0,
-                    'max': 100,
-                }
-            });
-        });
-
-        // Range selectable
-        $('.ui-slider-range').each(function() {
-            noUiSlider.create(this, {
-                start: [25, 75],
-                range: {
-                    'min': 0,
-                    'max': 100
-                },
-                connect: true
-            });
-
-        });
-
-        // Live Values
-        $('.ui-slider-values').each(function() {
-            var slider = this;
-
-            noUiSlider.create(slider, {
-                start: [35, 75],
-                connect: true,
-                // direction: 'rtl',
-                behaviour: 'tap-drag',
-                range: {
-                    'min': 0,
-                    'max': 100
-                }
-            });
-
-            slider.noUiSlider.on('slide', updateValues);
-            updateValues();
-
-            function updateValues() {
-                var values = slider.noUiSlider.get();
-                // Connecto to live values
-                $('#ui-slider-value-lower').html(values[0]);
-                $('#ui-slider-value-upper').html(values[1]);
-            }
         });
 
         // Colorpicker
