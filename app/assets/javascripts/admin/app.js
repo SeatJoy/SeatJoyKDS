@@ -1597,7 +1597,6 @@
       });
 
       $('.ui-slider-with-top-value').each(function() {
-          var slider = this;
 
           noUiSlider.create(this, {
               start: $(this).data('start'),
@@ -1613,18 +1612,6 @@
               }
           });
 
-          slider.noUiSlider.on('slide', updateValues);
-          updateValues();
-
-          function updateValues() {
-              var values = slider.noUiSlider.get();
-              // Connecto to live values
-              console.log("values[0]: " + values[0])
-              console.log("values[1]: " + values[1])
-
-              $('#ui-slider-with-lower-value').html(values[0]);
-              $('#ui-slider-with-top-value').html(values[1]);
-          }
       });
 
       // Range selectable
