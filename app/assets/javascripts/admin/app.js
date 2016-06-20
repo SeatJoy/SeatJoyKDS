@@ -1373,6 +1373,16 @@
 (function() {
     'use strict';
 
+    $(runMasonryOnHomePage);
+
+    function runMasonryOnHomePage() {
+      $('.grid').masonry({
+          itemSelector: '.grid-item',
+          percentPosition: true,
+          columnWidth: '.grid-sizer'
+      });
+    }
+
     $(runMasonry);
 
     function runMasonry() {

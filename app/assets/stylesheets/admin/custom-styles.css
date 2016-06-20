@@ -1,0 +1,8 @@
+@media only screen and (min-width: 992px) {
+  .grid-sizer,
+  .grid-item,
+  .grid-item.custom {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}

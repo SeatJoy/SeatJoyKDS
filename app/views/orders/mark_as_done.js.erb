@@ -4,7 +4,15 @@ $("#orders_done").text("<%= done %>");
 
 // orders list re-rendered
 $("#orders").html("");
-$("#orders").html("<%= escape_javascript(render collection) %>")
+$("#orders").append("<div class='grid-sizer'></div>"); // required by Masonry
+$("#orders").append("<%= escape_javascript(render collection) %>")
+
+// re-arrange orders listing with Masonry
+$(".grid").masonry({
+    itemSelector: ".grid-item",
+    percentPosition: true,
+    columnWidth: ".grid-sizer"
+});
 
 // hide loader gif
 $("#loader").hide();
