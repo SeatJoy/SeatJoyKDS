@@ -478,6 +478,42 @@
 
         $('#pie-flotchart-orders-pending-delivered').plot(pieData, pieOptions);
 
+        // PIE - Targetted Users vs. Total Users
+        // -----------------------------------
+        var pieData = [{
+            'label': 'Targetted',
+            'color': '#009688',
+            'data': 50
+        }, {
+            'label': 'Total',
+            'color': '#FFC107',
+            'data': 145
+        }];
+        var pieOptions = {
+            series: {
+                pie: {
+                    show: true,
+                    innerRadius: 0,
+                    label: {
+                        show: true,
+                        radius: 0.8,
+                        formatter: function(label, series) {
+                            return '<div class="flot-pie-label">' +
+                                //label + ' : ' +
+                                Math.round(series.percent) +
+                                '%</div>';
+                        },
+                        background: {
+                            opacity: 0.8,
+                            color: '#222'
+                        }
+                    }
+                }
+            }
+        };
+
+        $('#pie-flotchart-targetted-vs-total-users').plot(pieData, pieOptions);
+
         // DONUT
         // -----------------------------------
         var donutData = [{
