@@ -12,56 +12,23 @@
       <div class="container-fluid">
 
         <div class="row">
+
+          <div class="col-lg-12">
+            <div class="card">
+              <select name="account" class="form-control">
+                <option>Game</option>
+                <option>SJ vs. LA , 3/23/2016</option>
+                <option>SJ vs. LA , 3/26/2016</option>
+                <option>SJ vs. LA , 3/29/2016</option>
+                <option>SJ vs. LA , 4/02/2016</option>
+              </select>
+            </div>
+          </div>
+
           <div class="col-lg-4">
             <div class="card">
               <div class="card-body">
                 <form method="get" action="/" class="form-horizontal">
-
-                  <h6 class="mt0">Filters</h6>
-                  <div class="col-sm-6">
-                    <label class="col-sm-4 control-label">Filter 1</label>
-                    <div class="col-sm-8">
-                      <div class="checkbox c-checkbox">
-                        <label>
-                          <input type="checkbox" value=""><span class="ion-checkmark-round"></span> 2-6
-                        </label>
-                      </div>
-                      <div class="checkbox c-checkbox">
-                        <label>
-                          <input type="checkbox" value=""><span class="ion-checkmark-round"></span> 6-10
-                        </label>
-                      </div>
-                      <div class="checkbox c-checkbox">
-                        <label>
-                          <input type="checkbox" value=""><span class="ion-checkmark-round"></span> 10-15
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-6">
-                    <label class="col-sm-4 control-label">Filter 2</label>
-                    <div class="col-sm-8">
-                      <div class="checkbox c-checkbox">
-                        <label>
-                          <input type="checkbox" value=""><span class="ion-checkmark-round"></span> 2-6
-                        </label>
-                      </div>
-                      <div class="checkbox c-checkbox">
-                        <label>
-                          <input type="checkbox" value=""><span class="ion-checkmark-round"></span> 6-10
-                        </label>
-                      </div>
-                      <div class="checkbox c-checkbox">
-                        <label>
-                          <input type="checkbox" value=""><span class="ion-checkmark-round"></span> 10-15
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-12"><br/><br/></div>
-
                   <h6 class="mt0">Charts</h6>
                   <div class="form-group">
                     <div class="col-sm-12">
@@ -116,15 +83,42 @@
               <div class="card-body">
                 <h6 class="mt0">Settings</h6>
 
-                <h6 class="small-mt0 text-thin">Mascbot upsell users: <b>360</b></h6><br/>
-                <h6 class="small-mt0 text-thin">Game: <b>SJ vs. LA</b> (users choice friendship dam)</h6><br/>
+                <h6 class="small-mt0 text-thin">Mascbot AI recommended upsell users: <b>360</b></h6><br/>
+
+                <h6 class="small-mt0 text-thin">Items</h6><br/>
+                <div class="col-lg-12">
+                  <label class="checkbox-inline c-checkbox">
+                    <input id="inlineCheckbox10" type="checkbox" value="option1"><span class="ion-checkmark-round"></span> Box Fries
+                  </label>
+                  <label class="checkbox-inline c-checkbox">
+                    <input id="inlineCheckbox20" type="checkbox" value="option2"><span class="ion-checkmark-round"></span> Box Pizzas
+                  </label>
+                  <label class="checkbox-inline c-checkbox">
+                    <input id="inlineCheckbox30" type="checkbox" value="option3"><span class="ion-checkmark-round"></span> Box Burger
+                  </label>
+                </div>
+
+                <br/><br/>
+
+                <div class="col-lg-6">
+                  <select name="account" class="form-control">
+                    <option>Section</option>
+                    <option>Section #123</option>
+                    <option>Section #345</option>
+                    <option>Section #567</option>
+                    <option>Section #789</option>
+                  </select>
+                </div>
+                <div class="col-lg-6"></div>
+
+                <br/><br/>
 
                 <h6 class="small-mt0 text-thin">Set upsell push time:</h6><br/>
                 <div data-start="40" class="ui-slider-with-top-value mb-lg"></div>
               </div>
 
               <div class="card-body">
-                <a type="button" class="btn btn-primary ripple">Submit<span class="md-ripple"></span></a>
+                <a type="button" class="btn btn-primary ripple">Set Campaign<span class="md-ripple"></span></a>
               </div>
             </div>
           </div>
