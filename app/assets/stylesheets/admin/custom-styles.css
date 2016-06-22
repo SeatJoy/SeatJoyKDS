@@ -6,3 +6,12 @@
     padding-left: 10px;
   }
 }
+
+#panelDemo7.panel.panel-primary {
+  border-color: rgba(68, 138, 255, 1.15);
+}
+
+#panelDemo7.panel.panel-primary a.btn-xl {
+  display: block;
+  width: 100%;
+}
