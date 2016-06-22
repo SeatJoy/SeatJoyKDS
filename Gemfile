@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 ruby "2.2.0"
 
+gem "devise",               "~> 4.1.1"
 gem "jquery-rails",         "~> 4.1.1"
 gem "figaro",               "~> 1.1.1"
 gem "pg",                   "~> 0.18.4"
