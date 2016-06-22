@@ -12,73 +12,6 @@
       <div class="container-fluid">
 
         <div class="row">
-
-          <div class="col-lg-12">
-            <div class="card">
-              <select name="account" class="form-control">
-                <option>Game</option>
-                <option>SJ vs. LA , 3/23/2016</option>
-                <option>SJ vs. LA , 3/26/2016</option>
-                <option>SJ vs. LA , 3/29/2016</option>
-                <option>SJ vs. LA , 4/02/2016</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="card">
-              <div class="card-body">
-                <form method="get" action="/" class="form-horizontal">
-                  <h6 class="mt0">Charts</h6>
-                  <div class="form-group">
-                    <div class="col-sm-12">
-                      <div class="checkbox c-checkbox">
-                        <label>
-                          <input type="checkbox" checked="" value=""><span class="ion-checkmark-round"></span> Boil
-                        </label>
-                      </div>
-                      <div class="checkbox c-checkbox">
-                        <label>
-                          <input type="checkbox" checked="" value=""><span class="ion-checkmark-round"></span> Targetted vs. Total
-                        </label>
-                      </div>
-                      <div class="checkbox c-checkbox">
-                        <label>
-                          <input type="checkbox" value=""><span class="ion-checkmark-round"></span> Another Graph
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="card">
-              <div class="card-heading">
-                <div class="card-title small-card-title">Targetted Users vs. Total Users</div>
-              </div>
-              <div class="card-body">
-                <div id="pie-flotchart-targetted-vs-total-users" class="flot-chart flot-chart-lg"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="card">
-              <div class="card-heading">
-                <div class="card-title small-card-title">Boil</div>
-              </div>
-              <div class="card-body">
-                <div id="bar-flotchart-average-payments" class="flot-chart flot-chart-lg"></div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="row">
           <div class="col-lg-12">
             <div class="card">
               <div class="card-body">
@@ -100,13 +33,24 @@
                 </div>
 
                 <br/><br/>
-                <h6 class="small-mt0 text-thin">Section: </h6><br/>
+                <h6 class="small-mt0 text-thin">Game: </h6><br/>
                 <div class="col-lg-12">
                   <select name="account" class="form-control">
                     <option>Section #123</option>
                     <option>Section #345</option>
                     <option>Section #567</option>
                     <option>Section #789</option>
+                  </select>
+                </div>
+
+                <br/><br/>
+                <h6 class="small-mt0 text-thin">Section: </h6><br/>
+                <div class="col-lg-12">
+                  <select name="account" class="form-control">
+                    <option>SJ vs. LA , 3/23/2016</option>
+                    <option>SJ vs. LA , 3/26/2016</option>
+                    <option>SJ vs. LA , 3/29/2016</option>
+                    <option>SJ vs. LA , 4/02/2016</option>
                   </select>
                 </div>
                 <div class="col-lg-12"></div>
@@ -119,6 +63,43 @@
 
               <div class="card-body">
                 <a type="button" class="btn btn-primary ripple">Set Campaign<span class="md-ripple"></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <form method="get" action="/" class="form-horizontal">
+                  <h6 class="mt0">Charts</h6>
+                  <div class="form-group">
+                    <div class="col-sm-12">
+                      <div class="checkbox c-checkbox">
+                        <label>
+                          <input type="checkbox" checked="" value=""><span class="ion-checkmark-round"></span> Targetted vs. Total
+                        </label>
+                      </div>
+                      <div class="checkbox c-checkbox">
+                        <label>
+                          <input type="checkbox" value=""><span class="ion-checkmark-round"></span> Graph 2
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-heading">
+                <div class="card-title small-card-title">Targetted Users vs. Total Users</div>
+              </div>
+              <div class="card-body">
+                <div id="pie-flotchart-targetted-vs-total-users" class="flot-chart flot-chart-lg"></div>
               </div>
             </div>
           </div>
