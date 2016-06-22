@@ -9,7 +9,6 @@ Rails.application.routes.draw do
 
   namespace :admin do
     get "/"      => "dashboard#index"
-    get "/login" => "dashboard#login",          as: :login
 
     scope :reports do
       get "/"             => "reports#index",   as: :reports
