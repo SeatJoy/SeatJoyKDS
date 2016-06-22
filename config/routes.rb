@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get "/admins/sign_up" => redirect("/admin")
+
   devise_for :admins, controllers: {
                       passwords: "admins/passwords",
                       sessions:  "admins/sessions"
