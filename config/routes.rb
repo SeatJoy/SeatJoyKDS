@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :orders, only: [:update] do
-    member do
-      put :mark_as_done
-    end
-  end
+  devise_for :admins, controllers: {
+                      passwords: "admins/passwords",
+                      sessions:  "admins/sessions"
+                    }
 
   namespace :admin do
     get "/"      => "dashboard#index"
@@ -27,6 +26,12 @@ Rails.application.routes.draw do
 
     scope :upsell do
       get "/"             => "upsell#index",    as: :upsell
+    end
+  end
+
+  resources :orders, only: [:update] do
+    member do
+      put :mark_as_done
     end
   end
 
