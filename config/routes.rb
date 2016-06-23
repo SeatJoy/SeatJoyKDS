@@ -28,6 +28,10 @@ Rails.application.routes.draw do
     scope :upsell do
       get "/"             => "upsell#index",    as: :upsell
     end
+
+    scope :runners do
+      get "/"             => "runners#index",   as: :runners
+    end
   end
 
   resources :orders, only: [:update] do

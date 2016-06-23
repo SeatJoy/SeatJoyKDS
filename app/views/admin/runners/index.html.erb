@@ -1,0 +1,89 @@
+<div class="layout-container">
+  <%= render partial: "admin/shared/top_nav_bar" %>
+  <%= render partial: "admin/shared/side_bar" %>
+
+  <div class="sidebar-layout-obfuscator"></div>
+  <!-- Main section-->
+  <main class="main-container">
+    <!-- Page content-->
+    <section>
+      <%= render partial: "admin/shared/game_header" %>
+
+      <div class="container-fluid">
+        <h6 class="mt0 small-mt0">Runners</h6><br/>
+        <button type="button" class="mb-sm btn btn-primary ripple">Download CSV<span class="md-ripple"></span></button>
+
+        <div class="card">
+          <div class="table-responsive bootgrid">
+            <table id="" class="table table-striped">
+              <thead>
+                <tr>
+                  <th data-column-id="runner-name">Runner Name</th>
+                  <th data-column-id="picture">Picture</th>
+                  <th data-column-id="deliveries-assigned"># Deliveries Assigned</th>
+                  <th data-column-id="deliveries-completed"># Deliveries Completed</th>
+                  <th data-column-id="section-assigned">Section Assigned</th>
+                  <th data-column-id="report">Report</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Clark Kent</td>
+                  <td>
+                    <%= image_tag "runner/runner1.png", class: "img-circle thumb64" %>
+                  </td>
+                  <td><%= (100..300).to_a.sample %></td>
+                  <td><%= (10..100).to_a.sample %></td>
+                  <td><%= ("A".."Z").to_a.sample %></td>
+                  <td><a href="#" class="ripple">Report</a></td>
+                </tr>
+                <tr>
+                  <td>Bruce Wayne</td>
+                  <td>
+                    <%= image_tag "runner/runner2.jpg", class: "img-circle thumb64" %>
+                  </td>
+                  <td><%= (100..300).to_a.sample %></td>
+                  <td><%= (10..100).to_a.sample %></td>
+                  <td><%= ("A".."Z").to_a.sample %></td>
+                  <td><a href="#" class="ripple">Report</a></td>
+                </tr>
+                <tr>
+                  <td>Matt Murdock</td>
+                  <td>
+                    <%= image_tag "runner/runner3.jpg", class: "img-circle thumb64" %>
+                  </td>
+                  <td><%= (100..300).to_a.sample %></td>
+                  <td><%= (10..100).to_a.sample %></td>
+                  <td><%= ("A".."Z").to_a.sample %></td>
+                  <td><a href="#" class="ripple">Report</a></td>
+                </tr>
+                <tr>
+                  <td>Ralph Gordon</td>
+                  <td>
+                    <%= image_tag "runner/runner4.jpg", class: "img-circle thumb64" %>
+                  </td>
+                  <td><%= (100..300).to_a.sample %></td>
+                  <td><%= (10..100).to_a.sample %></td>
+                  <td><%= ("A".."Z").to_a.sample %></td>
+                  <td><a href="#" class="ripple">Report</a></td>
+                </tr>
+                <tr>
+                  <td>Bart Allen</td>
+                  <td>
+                    <%= image_tag "runner/runner5.jpg", class: "img-circle thumb64" %>
+                  </td>
+                  <td><%= (100..300).to_a.sample %></td>
+                  <td><%= (10..100).to_a.sample %></td>
+                  <td><%= ("A".."Z").to_a.sample %></td>
+                  <td><a href="#" class="ripple">Report</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+</div>
