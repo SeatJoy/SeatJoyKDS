@@ -13,6 +13,12 @@
         <button type="button" class="btn btn-raised btn-info ripple">Docs<span class="md-ripple"></span></button>
       </li>
       <li>&nbsp;&nbsp;</li>
+      <li>
+        <button style="background: transparent;border: none;">
+          <%= link_to "Log out<span class='md-ripple'></span>".html_safe, destroy_admin_session_path, method: :delete, class: "btn btn-raised btn-info ripple" %>
+        </button>
+      </li>
+      <li>&nbsp;&nbsp;</li>
     </ul>
   </nav>
 </header>
