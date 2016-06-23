@@ -478,6 +478,42 @@
 
         $('#pie-flotchart-orders-pending-delivered').plot(pieData, pieOptions);
 
+        // PIE - Runners - Deliveries Completed vs. Deliveries to be completed
+        // -----------------------------------
+        var pieData = [{
+            'label': 'Completed',
+            'color': '#009688',
+            'data': 145
+        }, {
+            'label': 'To be completed',
+            'color': '#FFC107',
+            'data': 50
+        }];
+        var pieOptions = {
+            series: {
+                pie: {
+                    show: true,
+                    innerRadius: 0,
+                    label: {
+                        show: true,
+                        radius: 0.8,
+                        formatter: function(label, series) {
+                            return '<div class="flot-pie-label">' +
+                                //label + ' : ' +
+                                Math.round(series.percent) +
+                                '%</div>';
+                        },
+                        background: {
+                            opacity: 0.8,
+                            color: '#222'
+                        }
+                    }
+                }
+            }
+        };
+
+        $('#pie-flotchart-deliveries-completed-to-be-completed').plot(pieData, pieOptions);
+
         // PIE - Targetted Users vs. Total Users
         // -----------------------------------
         var pieData = [{
