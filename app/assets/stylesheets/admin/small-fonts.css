@@ -1,13 +1,33 @@
-h5.small-mt0 {
-  font-size: 15px !important;
+#panelDemo7 .panel-body {
+  font-size: 12px;
 }
 
-h6.small-mt0 {
-  font-size: 15px !important;
-  line-height: 0px;
-  margin-bottom:0px;
+.well #orders_pending, #orders_done {
+  font-size: 24px;
 }
 
-.small-card-title {
-  font-size: 15px !important;
+.well h6.mt0 {
+  font-size: 12px;
+}
+
+.panel-title {
+  font-size: 12px;
+}
+
+.panel-footer .btn.btn-primary.btn-xl {
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 700px) {
+  .grid-sizer,
+  .grid-item {
+    width: 25%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .grid-sizer,
+  .grid-item {
+    width: 20%;
+  }
 }

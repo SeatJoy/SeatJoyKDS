@@ -1,0 +1,33 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_self
+
+ *= require admin/animate
+ *= require admin/bootstrap.min
+ *= require admin/ionicons
+ *= require admin/blueimp-gallery
+ *= require admin/blueimp-gallery-indicator
+ *= require admin/blueimp-gallery-video
+ *= require admin/rickshaw
+ *= require admin/nouislider.min
+ *= require admin/summernote
+ *= require admin/bootstrap-editable
+ *= require admin/jquery.bootgrid
+ *= require admin/jquery.dataTables
+ *= require admin/loaders
+ *= require admin/colors
+ *= require admin/app
+
+ *= require admin/custom-styles
+ *= require admin/small-fonts
+ */
