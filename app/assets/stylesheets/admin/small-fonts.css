@@ -1,3 +1,4 @@
+/* Home Page */
 #panelDemo7 .panel-body {
   font-size: 12px;
 }
@@ -31,3 +32,34 @@
     width: 20%;
   }
 }
+/* Home Page */
+
+/***************************/
+
+/* Admin */
+h5.small-mt0 {
+  font-size: 12px !important;
+}
+
+h6.small-mt0 {
+  font-size: 12px !important;
+  line-height: 0px;
+  margin-bottom:0px;
+}
+
+.small-card-title {
+  font-size: 12px !important;
+}
+
+.layout-container {
+  font-size: 12px;
+}
+
+h2.header-title {
+  font-size: 12px;
+}
+
+.m0.text-thin {
+  font-size: 14px;
+}
+/* Admin */
