@@ -40,6 +40,5 @@ Rails.application.routes.draw do
     end
   end
 
-  get "/home-smaller" => "home#index_smaller"
   root "home#index"
 end

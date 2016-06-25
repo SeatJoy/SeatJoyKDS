@@ -1,16 +1,12 @@
 class HomeController < ApplicationController
 
-  layout "admin", only: :index
+  layout "admin"
 
   before_action :set_counters
 
   helper_method :orders
 
   def index
-  end
-
-  def index_smaller
-    render "index", layout: "admin_smaller"
   end
 
   private
