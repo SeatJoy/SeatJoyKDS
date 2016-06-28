@@ -11,7 +11,31 @@
 
       <div class="container-fluid">
         <h6 class="mt0 small-mt0">Hourly Sales</h6><br/>
+
+        <div class="row">
+          <div class="col-lg-6 col-sm-6">
+            <select name="account" class="form-control">
+              <option>1 week</option>
+              <option>2 weeks</option>
+              <option>1 month</option>
+              <option>2 months</option>
+              <option>4 months</option>
+            </select>
+          </div>
+
+          <div class="col-lg-6 col-sm-6">
+            <select name="account" class="form-control">
+              <option>5 games</option>
+              <option>10 games</option>
+              <option>20 games</option>
+            </select>
+          </div>
+        </div>
+
+        <br/>
+
         <button type="button" class="mb-sm btn btn-primary ripple">Download CSV<span class="md-ripple"></span></button>
+
         <div class="card">
           <div class="table-responsive bootgrid">
             <table id="bootgrid-basic" class="table table-striped">
