@@ -6,7 +6,7 @@ class CreateOrders < ActiveRecord::Migration
       t.string  :seat_address
       t.string  :status
       t.string  :stadium
-      t.decimal :total
+      t.decimal :total, precision: 10, scale: 2, default: 0.0
 
       t.timestamps null: false
     end
