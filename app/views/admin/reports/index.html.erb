@@ -10,29 +10,34 @@
       <%= render partial: "admin/shared/game_header" %>
 
       <div class="container-fluid">
-        <h6 class="mt0 small-mt0">Hourly Sales</h6><br/>
 
         <div class="row">
-          <div class="col-lg-6 col-sm-6">
+          <div class="col-lg-2 col-sm-3">
+            <button type="button" class="mb-sm btn btn-primary ripple">Download PDF Report<span class="md-ripple"></span></button>
+          </div>
+          <div class="col-lg-5 col-sm-4">
             <select name="account" class="form-control">
               <option>1 week</option>
               <option>2 weeks</option>
+              <option>3 weeks</option>
               <option>1 month</option>
-              <option>2 months</option>
-              <option>4 months</option>
             </select>
           </div>
-
-          <div class="col-lg-6 col-sm-6">
+          <div class="col-lg-5 col-sm-5">
             <select name="account" class="form-control">
-              <option>5 games</option>
-              <option>10 games</option>
-              <option>20 games</option>
+              <option>0 - 15 min</option>
+              <option>15 - 30 min</option>
+              <option>30 - 45 min</option>
+              <option>45 - 60 min</option>
+              <option>60 - 75 min</option>
+              <option>75 - 90 min</option>
             </select>
           </div>
         </div>
 
-        <br/>
+        <br/><br/>
+
+        <h6 class="mt0 small-mt0">Hourly Sales</h6><br/>
 
         <button type="button" class="mb-sm btn btn-primary ripple">Download CSV<span class="md-ripple"></span></button>
 
