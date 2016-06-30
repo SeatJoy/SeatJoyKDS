@@ -22,7 +22,8 @@ Rails.application.routes.draw do
     end
 
     scope :inventory do
-      get "/"             => "inventory#index", as: :inventory
+      get  "/"            => "inventory#index",      as: :inventory
+      post "/upload_csv"  => "inventory#upload_csv", as: :inventory_upload_csv
     end
 
     scope :upsell do
