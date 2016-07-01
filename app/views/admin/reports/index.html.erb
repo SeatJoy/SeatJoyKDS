@@ -23,23 +23,11 @@
               <option>1 month</option>
             </select>
           </div>
-          <div class="col-lg-5 col-sm-5">
-            <select name="account" class="form-control">
-              <option>0 - 15 min</option>
-              <option>15 - 30 min</option>
-              <option>30 - 45 min</option>
-              <option>45 - 60 min</option>
-              <option>60 - 75 min</option>
-              <option>75 - 90 min</option>
-            </select>
-          </div>
         </div>
 
         <br/><br/>
 
         <h6 class="mt0 small-mt0">Hourly Sales</h6><br/>
-
-        <button type="button" class="mb-sm btn btn-primary ripple">Download CSV<span class="md-ripple"></span></button>
 
         <div class="card">
           <div class="table-responsive bootgrid">
@@ -55,86 +43,18 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>10:00AM - 10:59AM</td>
-                  <td><%= (1..50).to_a.sample %></td>
-                  <td><%= (10..500).to_a.sample %></td>
-                  <td><%= (10..25).to_a.sample %></td>
-                  <td><%= (700..1500).to_a.sample %></td>
-                  <td>% <%= (7..70).to_a.sample %></td>
-                </tr>
-                <tr>
-                  <td>11:00AM - 11:59AM</td>
-                  <td><%= (1..50).to_a.sample %></td>
-                  <td><%= (10..500).to_a.sample %></td>
-                  <td><%= (10..25).to_a.sample %></td>
-                  <td><%= (700..1500).to_a.sample %></td>
-                  <td>% <%= (7..70).to_a.sample %></td>
-                </tr>
-                <tr>
-                  <td>12:00PM - 12:59PM</td>
-                  <td><%= (1..50).to_a.sample %></td>
-                  <td><%= (10..500).to_a.sample %></td>
-                  <td><%= (10..25).to_a.sample %></td>
-                  <td><%= (700..1500).to_a.sample %></td>
-                  <td>% <%= (7..70).to_a.sample %></td>
-                </tr>
-                <tr>
-                  <td>01:00PM - 01:59PM</td>
-                  <td><%= (1..50).to_a.sample %></td>
-                  <td><%= (10..500).to_a.sample %></td>
-                  <td><%= (10..25).to_a.sample %></td>
-                  <td><%= (700..1500).to_a.sample %></td>
-                  <td>% <%= (7..70).to_a.sample %></td>
-                </tr>
-                <tr>
-                  <td>02:00PM - 02:59PM</td>
-                  <td><%= (1..50).to_a.sample %></td>
-                  <td><%= (10..500).to_a.sample %></td>
-                  <td><%= (10..25).to_a.sample %></td>
-                  <td><%= (700..1500).to_a.sample %></td>
-                  <td>% <%= (7..70).to_a.sample %></td>
-                </tr>
-                <tr>
-                  <td>03:00PM - 03:59PM</td>
-                  <td><%= (1..50).to_a.sample %></td>
-                  <td><%= (10..500).to_a.sample %></td>
-                  <td><%= (10..25).to_a.sample %></td>
-                  <td><%= (700..1500).to_a.sample %></td>
-                  <td>% <%= (7..70).to_a.sample %></td>
-                </tr>
-                <tr>
-                  <td>04:00PM - 04:59PM</td>
-                  <td><%= (1..50).to_a.sample %></td>
-                  <td><%= (10..500).to_a.sample %></td>
-                  <td><%= (10..25).to_a.sample %></td>
-                  <td><%= (700..1500).to_a.sample %></td>
-                  <td>% <%= (7..70).to_a.sample %></td>
-                </tr>
-                <tr>
-                  <td>05:00PM - 06:59PM</td>
-                  <td><%= (1..50).to_a.sample %></td>
-                  <td><%= (10..500).to_a.sample %></td>
-                  <td><%= (10..25).to_a.sample %></td>
-                  <td><%= (700..1500).to_a.sample %></td>
-                  <td>% <%= (7..70).to_a.sample %></td>
-                </tr>
-                <tr>
-                  <td>07:00PM - 07:59PM</td>
-                  <td><%= (1..50).to_a.sample %></td>
-                  <td><%= (10..500).to_a.sample %></td>
-                  <td><%= (10..25).to_a.sample %></td>
-                  <td><%= (700..1500).to_a.sample %></td>
-                  <td>% <%= (7..70).to_a.sample %></td>
-                </tr>
-                <tr>
-                  <td>08:00PM - 08:59PM</td>
-                  <td><%= (1..50).to_a.sample %></td>
-                  <td><%= (10..500).to_a.sample %></td>
-                  <td><%= (10..25).to_a.sample %></td>
-                  <td><%= (700..1500).to_a.sample %></td>
-                  <td>% <%= (7..70).to_a.sample %></td>
-                </tr>
+                <% 44.times do |index| %>
+                  <tr>
+                    <td>
+                      <%= fifteen_minutes_periods[index] %> - <%= fifteen_minutes_periods[index + 1] %>
+                    </td>
+                    <td><%= (1..50).to_a.sample %></td>
+                    <td><%= (10..500).to_a.sample %></td>
+                    <td><%= (10..25).to_a.sample %></td>
+                    <td><%= (700..1500).to_a.sample %></td>
+                    <td>% <%= (7..70).to_a.sample %></td>
+                  </tr>
+                <% end %>
               </tbody>
             </table>
           </div>
@@ -143,7 +63,6 @@
 
       <div class="container-fluid">
         <h6 class="mt0 small-mt0">Payments overview</h6><br/>
-        <button type="button" class="mb-sm btn btn-primary ripple">Download CSV<span class="md-ripple"></span></button>
         <div class="row">
           <div class="col-lg-12">
             <div class="card">
@@ -157,7 +76,6 @@
           </div>
 
           <div class="col-lg-12">
-            <button type="button" class="mb-sm btn btn-primary ripple">Download CSV<span class="md-ripple"></span></button>
             <div class="card">
               <div class="card-heading">
                 <div class="card-title small-card-title">Total Payments - 2824.75</div>
