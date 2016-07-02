@@ -60,5 +60,6 @@
 //= require admin/jquery.blueimp-gallery
 
 //= require orders
+//= require admin/inventory/order_items
 
 //= require admin/app
