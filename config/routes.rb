@@ -33,6 +33,8 @@ Rails.application.routes.draw do
     scope :runners do
       get "/"             => "runners#index",   as: :runners
     end
+
+    resources :inventory_order_items, only: [:update]
   end
 
   resources :orders, only: [:update] do
