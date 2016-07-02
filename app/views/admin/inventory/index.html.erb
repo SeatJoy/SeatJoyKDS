@@ -20,7 +20,7 @@
                     <tr>
                       <th>#</th>
                       <th>Item</th>
-                      <th>Amount</th>
+                      <th>Price</th>
                       <th>Quantity</th>
                     </tr>
                   </thead>
@@ -31,7 +31,20 @@
                           <span class="badge bg-pink-500"><%= order_item.id %></span>
                         </td>
                         <td><p class="m0"><%= order_item.title %></p></td>
-                        <td class="va-middle">$<%= order_item.price %></td>
+
+                        <td class="va-middle">
+                          <div id="order_item_label_<%= order_item.id %>"
+                               data-behavior="inventory-order-item-label"
+                               data-order-item-id="<%= order_item.id %>">
+                            $<%= order_item.price %>
+                          </div>
+
+                          <div id="order_item_action_<%= order_item.id %>" hidden>
+                            <%= text_field_tag "price", order_item.price %>
+                            <%= link_to "✓", "#", "data-behavior" => "save-inventory-order-item", "data-order-item-id" => order_item.id %>
+                          </div>
+                        </td>
+
                         <td class="va-middle"><%= order_item.quantity %></td>
                       </tr>
                     <% end %>
