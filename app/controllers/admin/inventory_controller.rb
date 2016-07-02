@@ -11,7 +11,7 @@ class Admin::InventoryController < Admin::BaseController
   private
 
   def collection
-    @collection ||= InventoryOrderItem.all
+    @collection ||= InventoryOrderItem.by_title
   end
 
   def set_nav_bar_klass
