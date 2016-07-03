@@ -2,7 +2,7 @@ class CreateOrderItems < ActiveRecord::Migration
   def change
     create_table :order_items do |t|
       t.integer :order_id
-      t.integer :quantity
+      t.integer :quantity,                        default: 0
       t.string  :title
       t.decimal :amount, precision: 10, scale: 2, default: 0.0
 

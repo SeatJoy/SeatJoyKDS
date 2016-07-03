@@ -3,7 +3,7 @@ class CreateInventoryOrderItems < ActiveRecord::Migration
     create_table :inventory_order_items do |t|
       t.string  :title
       t.decimal :price, precision: 10, scale: 2, default: 0.0
-      t.integer :quantity
+      t.integer :quantity,                       default: 0
 
       t.timestamps null: false
     end

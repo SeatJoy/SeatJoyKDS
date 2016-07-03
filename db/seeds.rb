@@ -6,34 +6,36 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+puts "Setting up sample admins..."
+
+Admin.create(
+  email:                 "contact@seatjoy.io",
+  password:              "abhinav",
+  password_confirmation: "abhinav")
+
+Admin.create(
+  email:                 "jay_polkinghorn@comcastspectacor.com",
+  password:              "LetsGoQuakes",
+  password_confirmation: "LetsGoQuakes")
+
+puts
+puts "Done!"
+
+puts
 puts "Setting up sample orders..."
 
-15.times do |i|
+35.times do |i|
   Order.create({
     game:         "LA Galaxy vs. Toronto Raptors",
     phone:        "(503)-444-1111",
     seat_address: "G/23/45",  # section / row / seat
-    status:       "pending",
-    stadium:      "Stadium A"
+    status:       ["pending", "done"].sample,
+    stadium:      ["Stadium A", "Stadium B"].sample
   })
 
   print "."
 
-  sleep 5
-end
-
-4.times do |i|
-  Order.create({
-    game:         "LA Galaxy vs. Toronto Raptors",
-    phone:        "(503)-444-1111",
-    seat_address: "G/23/45",  # section / row / seat
-    status:       "done",
-    stadium:      "Stadium B"
-  })
-
-  print "."
-
-  sleep 5
+  sleep 2
 end
 
 puts
