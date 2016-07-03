@@ -34,7 +34,7 @@ Rails.application.routes.draw do
       get "/"             => "runners#index",   as: :runners
     end
 
-    resources :inventory_order_items, only: [:update]
+    resources :inventory_order_items, only: [:create, :update]
   end
 
   resources :orders, only: [:update] do
