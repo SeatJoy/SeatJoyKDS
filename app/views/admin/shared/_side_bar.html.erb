@@ -21,7 +21,7 @@
     <nav class="sidebar-nav">
       <ul>
         <li class="<%= @dashboard_klass %>">
-          <%= link_to admin_path(small: params[:small]), class: "ripple" do %>
+          <%= link_to admin_path, class: "ripple" do %>
             <span class="pull-right nav-label"></span>
             <span class="nav-icon">
               <img src="" data-svg-replace="<%= asset_path('icons/aperture.svg') %>" alt="MenuItem" class="hidden">
@@ -30,7 +30,7 @@
           <% end %>
         </li>
         <li class="<%= @reports_klass %>">
-          <%= link_to admin_reports_path(small: params[:small]), class: "ripple" do %>
+          <%= link_to admin_reports_path, class: "ripple" do %>
             <span class="pull-right nav-label"></span>
             <span class="nav-icon">
               <img src="" data-svg-replace="<%= asset_path('icons/radio-waves.svg') %>" alt="MenuItem" class="hidden">
@@ -39,7 +39,7 @@
           <% end %>
         </li>
         <li class="<%= @inventory_klass %>">
-          <%= link_to admin_inventory_path(small: params[:small]), class: "ripple" do %>
+          <%= link_to admin_inventory_path, class: "ripple" do %>
             <span class="pull-right nav-label"></span>
             <span class="nav-icon">
               <img src="" data-svg-replace="<%= asset_path('icons/connection-bars.svg') %>" alt="MenuItem" class="hidden">
@@ -48,7 +48,7 @@
           <% end %>
         </li>
         <li class="<%= @upsell_klass %>">
-          <%= link_to admin_upsell_path(small: params[:small]), class: "ripple" do %>
+          <%= link_to admin_upsell_path, class: "ripple" do %>
             <span class="pull-right nav-label"></span>
             <span class="nav-icon">
               <img src="" data-svg-replace="<%= asset_path('icons/clipboard.svg') %>" alt="MenuItem" class="hidden">
@@ -57,7 +57,7 @@
           <% end %>
         </li>
         <li class="<%= @runners_klass %>">
-          <%= link_to admin_runners_path(small: params[:small]), class: "ripple" do %>
+          <%= link_to admin_runners_path, class: "ripple" do %>
             <span class="pull-right nav-label"></span>
             <span class="nav-icon">
               <img src="" data-svg-replace="<%= asset_path('icons/person-stalker.svg') %>" alt="MenuItem" class="hidden">
