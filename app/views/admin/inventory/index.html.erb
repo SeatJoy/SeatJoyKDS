@@ -40,8 +40,7 @@
                           </div>
 
                           <div id="order_item_action_<%= order_item.id %>" hidden>
-                            <%= text_field_tag "price", order_item.price %>
-                            <%= link_to "✓", "#", "data-behavior" => "save-inventory-order-item", "data-order-item-id" => order_item.id %>
+                            <%= text_field_tag "price", order_item.price, "data-behavior" => "save-inventory-order-item", "data-order-item-id" => order_item.id %>
                           </div>
                         </td>
 
