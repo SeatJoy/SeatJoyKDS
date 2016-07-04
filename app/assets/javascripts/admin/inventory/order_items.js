@@ -25,16 +25,11 @@ function update_order_item() {
       var order_item_id = $(this).data("order-item-id");
 
       var field_name    = $(this).data("field-name");
-      console.log("field_name :" + field_name);
-
       var field_value   = $(this).parent().find("input").val();
-      console.log("field_value :" + field_value);
 
       var input_id      = "#order_item_action_" + field_name + "_" + order_item_id;
       var label_id      = "#order_item_label_" + field_name + "_" + order_item_id;
 
-      console.log("input_id: " + input_id)
-      console.log("label_id: " + label_id)
 
       if (field_value == "") {
         alert("Please setup a " + field_name);
