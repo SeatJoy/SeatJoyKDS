@@ -30,7 +30,16 @@
                         <td class="va-middle">
                           <span class="badge bg-pink-500"><%= order_item.id %></span>
                         </td>
-                        <td><p class="m0"><%= order_item.title %></p></td>
+                        <td>
+                          <p class="m0">
+                            <%= render partial:    "editable_field",
+                                       locals: {
+                                         field_name: "title",
+                                         item:        order_item,
+                                         symbol:      nil
+                                       } %>
+                          </p>
+                        </td>
 
                         <td class="va-middle">
                           <%= render partial:    "editable_field",
@@ -40,7 +49,14 @@
                                        symbol:      "$"
                                      } %>
                         </td>
-                        <td class="va-middle"><%= order_item.quantity %></td>
+                        <td class="va-middle">
+                          <%= render partial:    "editable_field",
+                                     locals: {
+                                       field_name: "quantity",
+                                       item:        order_item,
+                                       symbol:      nil
+                                     } %>
+                        </td>
                       </tr>
                     <% end %>
                   </tbody>

@@ -51,7 +51,7 @@ function update_order_item() {
           success  : function(data){
             $(input_id).hide();
             $(label_id).show();
-            $(label_id).html("$" + field_value);
+            $(label_id).html(field_value);
           }
         });
       }
