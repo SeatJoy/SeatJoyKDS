@@ -1,0 +1,15 @@
+<div id="order_item_label_<%= field_name %>_<%= item.id %>"
+     data-behavior="inventory-order-item-label"
+     data-order-item-id="<%= item.id %>"
+     data-field-name="<%= field_name %>">
+  <%= symbol %><%= item.send(field_name) %>
+</div>
+
+<div id="order_item_action_<%= field_name %>_<%= item.id %>" hidden>
+  <%= text_field_tag field_name,
+      item.send(field_name),
+      "data-behavior"      => "save-inventory-order-item",
+      "data-order-item-id" => item.id,
+      "data-field-name"    => field_name
+  %>
+</div>
