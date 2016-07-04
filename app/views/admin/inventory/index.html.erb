@@ -33,14 +33,15 @@
                         <td><p class="m0"><%= order_item.title %></p></td>
 
                         <td class="va-middle">
-                          <div id="order_item_label_<%= order_item.id %>"
+                          <div id="order_item_label_price_<%= order_item.id %>"
                                data-behavior="inventory-order-item-label"
-                               data-order-item-id="<%= order_item.id %>">
+                               data-order-item-id="<%= order_item.id %>"
+                               data-field-name="price">
                             $<%= order_item.price %>
                           </div>
 
-                          <div id="order_item_action_<%= order_item.id %>" hidden>
-                            <%= text_field_tag "price", order_item.price, "data-behavior" => "save-inventory-order-item", "data-order-item-id" => order_item.id %>
+                          <div id="order_item_action_price_<%= order_item.id %>" hidden>
+                            <%= text_field_tag "price", order_item.price, "data-behavior" => "save-inventory-order-item", "data-order-item-id" => order_item.id, "data-field-name" => "price" %>
                           </div>
                         </td>
 
