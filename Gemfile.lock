@@ -130,6 +130,7 @@ GEM
       execjs (>= 0.3.0, < 3)
     warden (1.2.6)
       rack (>= 1.0)
+    wicked_pdf (1.0.6)
 
 PLATFORMS
   ruby
@@ -144,3 +145,4 @@ DEPENDENCIES
   rails_12factor (~> 0.0.3)
   sass-rails (~> 5.0.4)
   uglifier (~> 3.0.0)
+  wicked_pdf (~> 1.0.6)
