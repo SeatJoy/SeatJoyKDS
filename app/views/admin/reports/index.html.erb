@@ -13,7 +13,7 @@
 
         <div class="row">
           <div class="col-lg-2 col-sm-3">
-            <button type="button" class="mb-sm btn btn-primary ripple">Download PDF Report<span class="md-ripple"></span></button>
+            <%= link_to "Download PDF Report", admin_reports_in_pdf_path, class: "mb-sm btn btn-primary ripple" %>
           </div>
           <div class="col-lg-5 col-sm-4">
             <select name="account" class="form-control">

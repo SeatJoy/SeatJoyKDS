@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
     scope :reports do
       get "/"             => "reports#index",   as: :reports
+      get "/pdf"          => "reports#pdf",     as: :reports_in_pdf
+      get "/pdf2"         => "reports#pdf2"     # for testing purposes
       get "/orders_graph" => "reports#orders_graph"
     end
 
