@@ -25,7 +25,7 @@ class Admin::ReportsController < Admin::BaseController
     pdf = WickedPdf.new.pdf_from_string(html)
 
     send_data(pdf,
-      :filename    => "my_pdf_name.pdf",
+      :filename    => "seatjoy_report_#{Time.now.strftime("%d-%m-%y-%H%M%S")}.pdf",
       :disposition => "attachment")
   end
 
