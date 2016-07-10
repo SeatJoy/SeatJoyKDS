@@ -4,7 +4,7 @@ if Rails.env.production?
   if platform.include?("darwin")      # OS X machine
     binary_path = Rails.root.join("bin", "wkhtmltopdf-0.9.9-OS-X-i386").to_s
   elsif platform.include?("64-linux") # 64-bit linux machine
-    binary_path = Rails.root.join("bin", "wkhtmltopdf-linux-amd64").to_s
+    binary_path = Rails.root.join("bin", "wkhtmltopdf").to_s
   end
 else
   # binary_path = Rails.root.join("bin", "wkhtmltopdf-dev").to_s - when App is stored in linux partition. If it's stored on NTFS partition, this file can't be set as executable from a Linux environment.
