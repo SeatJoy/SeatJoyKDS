@@ -1,6 +1,6 @@
 <section>
   <div class="container-fluid">
-    <h6 class="mt0 small-mt0">Hourly Sales</h6><br/>
+    <h4 class="mt0 small-mt0">Hourly Sales</h4><br/>
 
     <div class="card">
       <div class="table-responsive bootgrid">
@@ -16,7 +16,7 @@
             </tr>
           </thead>
           <tbody>
-            <% 44.times do |index| %>
+            <% 23.times do |index| %>
               <tr>
                 <td>
                   <%= fifteen_minutes_periods[index] %> - <%= fifteen_minutes_periods[index + 1] %>
@@ -32,7 +32,42 @@
         </table>
       </div>
     </div>
+
+    <div style="page-break-after: always;"></div>
+
+    <div class="card">
+      <div class="table-responsive bootgrid">
+        <table id="bootgrid-basic" class="table table-striped">
+          <thead>
+            <tr>
+              <th data-column-id="time-range">Time Range</th>
+              <th data-column-id="transactions"># Transactions</th>
+              <th data-column-id="items"># Items</th>
+              <th data-column-id="avg-sales-check">Avg. Sales/Check</th>
+              <th data-column-id="sales">Sales</th>
+              <th data-column-id="sales-percentage">% Sales</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% 21.times do |index| %>
+              <tr>
+                <td>
+                  <%= fifteen_minutes_periods[index + 23] %> - <%= fifteen_minutes_periods[index + 23 + 1] %>
+                </td>
+                <td><%= (1..50).to_a.sample %></td>
+                <td><%= (10..500).to_a.sample %></td>
+                <td><%= (10..25).to_a.sample %></td>
+                <td><%= (700..1500).to_a.sample %></td>
+                <td>% <%= (7..70).to_a.sample %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
+
+  <div style="page-break-after: always;"></div>
 
   <div class="container-fluid">
     <h6 class="mt0 small-mt0">Payments overview</h6><br/>
