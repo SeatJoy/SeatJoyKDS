@@ -8,7 +8,12 @@ if Rails.env.production?
   end
 else
   # binary_path = Rails.root.join("bin", "wkhtmltopdf-dev").to_s - when App is stored in linux partition. If it's stored on NTFS partition, this file can't be set as executable from a Linux environment.
-  binary_path = "/usr/local/bin/wkhtmltopdf-dev"
+
+  # This binary package generates a PDF with a not-so-good quality
+  # binary_path = "/usr/local/bin/wkhtmltopdf-dev"
+
+  # This binary package generates a PDF with a better quality
+  binary_path = "/usr/local/bin/wkhtmltopdf"
 end
 
 WickedPdf.config = {
