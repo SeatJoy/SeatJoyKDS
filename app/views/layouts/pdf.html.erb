@@ -9,18 +9,13 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/2.21.3/css/blueimp-gallery.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.1/bootstrap-editable/css/bootstrap-editable.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+  <!-- Wicked PDF - some CSS files are loaded via CDN to avoid "undefined starts_with? method for nil" issue on certain CSS files -->
 
   <!-- Wicked PDF - CSS files that can be loaded without issues via wicked assets helper -->
   <%= wicked_pdf_stylesheet_link_tag "pdf/application" %>
+  <!-- Wicked PDF - CSS files that can be loaded without issues via wicked assets helper -->
 
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-  <script type="text/javascript" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-  <script type="text/javascript" href="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.js"></script>
-  <script type="text/javascript" href="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.categories.js"></script>
-  <script type="text/javascript" href="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.resize.js"></script>
-  <script type="text/javascript" href="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.pie.js"></script>
-  <script type="text/javascript" href="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.time.js"></script>
+  <%= wicked_pdf_javascript_include_tag "pdf/application" %>
 
 </head>
 
