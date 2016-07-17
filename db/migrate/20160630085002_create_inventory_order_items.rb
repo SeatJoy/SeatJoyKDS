@@ -4,6 +4,7 @@ class CreateInventoryOrderItems < ActiveRecord::Migration
       t.string  :title
       t.decimal :price, precision: 10, scale: 2, default: 0.0
       t.integer :quantity,                       default: 0
+      t.string  :stadium
 
       t.timestamps null: false
     end
@@ -11,5 +12,6 @@ class CreateInventoryOrderItems < ActiveRecord::Migration
     add_index :inventory_order_items, :title
     add_index :inventory_order_items, :price
     add_index :inventory_order_items, :quantity
+    add_index :inventory_order_items, :stadium
   end
 end
