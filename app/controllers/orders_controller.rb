@@ -1,3 +1,6 @@
+require 'HTTParty'
+require 'json'
+
 class OrdersController < ApplicationController
 
   before_action :find_order
@@ -8,6 +11,14 @@ class OrdersController < ApplicationController
 
   def mark_as_done
     @order.done!
+    @result = HTTParty.post('https://3abec280.ngrok.io/facebook/receive', 
+    :body => { :subject => 'This is the screen name', 
+               :issue_type => 'Application Problem', 
+               :status => 'Open', 
+               :priority => 'Normal', 
+               :description => 'This is the description for the problem'
+             }.to_json,
+    :headers => { 'Content-Type' => 'application/json' } )
   end
 
   private
